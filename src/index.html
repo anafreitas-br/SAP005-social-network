@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -30,12 +31,78 @@
 <div class="loginInit">
 </div>
   </main>
-  <footer>
-    @Rede Social Eko Green - Alunas laboratoria
+
+
+  <form action="Acesso">
+
+    <div class="form">
+      <input type="email" class="acessar" id="email" placeholder="Digite o seu email" autocomplete="off">
+    </div>
+
+    <div class="form">
+      <input type="password" class="acessar" id="senha" placeholder="Senha" autocomplete="off">
+    </div>
+
+  </form>
+
+  <button class="btn " id="btnCadastrar">
+    Cadastrar
+  </button>
+
+
+  <button class="btn " id="btnLogin">
+    Login
+  </button>
+
+
+  <button class="btn " id="btnGmail">
+    Entrar com o Gmail
+  </button>
+
+  <button class="btn " id="btnSair">
+    Sair
+  </button>
+
+  <button class="btn " id="btnHome">
+    Home
+  </button>
+
+
+  <footer>@Rede Social Eko Green - Alunas laboratoria
   </footer>
 
-  
-    <script type="module" src="router.js"></script>
 
-  </body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+
+
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyA7hVcpjh3HMz0WipRpe2-gZJ1U1i38PU4",
+      authDomain: "rede-social-893e0.firebaseapp.com",
+      projectId: "rede-social-893e0",
+      storageBucket: "rede-social-893e0.appspot.com",
+      messagingSenderId: "332323313520",
+      appId: "1:332323313520:web:1d4c3e0c797716de47a1b5",
+      measurementId: "G-VWNQS3P4HW"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script type="module" src="router.js"></script>
+     
+   
+</body>
+
 </html>
+
