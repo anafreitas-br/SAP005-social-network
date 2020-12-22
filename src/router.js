@@ -29,6 +29,21 @@ window.addEventListener('load', () => {
       onNavigate('/login');
     });
 
+    document
+    .getElementById('btnCadastrar')
+    .addEventListener('click', (e) => {
+      e.preventDefault();
+      onNavigate('/cadastro');
+    });
+
+    document
+    .getElementById('btnForgot')
+    .addEventListener('click', (e) => {
+      e.preventDefault();
+      onNavigate('/forgot');
+    });
+
+   
   routeRender();
 });
 
@@ -37,14 +52,15 @@ let email = document.getElementById('email');
 let senha = document.getElementById('senha');
 let btnCadastrar = document.getElementById('btnCadastrar')
 let btnGmail = document.getElementById('btnGmail')
-let btnSair = document.getElementById('Sair')
+let btnForgot = document.getElementById('btnForgot')
+let btnLogout = document.getElementById('btnLogout')
 let btnHome = document.getElementById('btnHome')
 var provider = new firebase.auth.GoogleAuthProvider();
 
 btnCadastrar.addEventListener('click', function () {
 
   firebase.auth().createUserWithEmailAndPassword(email.value, senha.value)
-    .then(function (result) {
+    .then(function (_result) {
       // Signed in
       // ...
       alert('Usuário Cadastrado Com Sucesso!');
@@ -63,7 +79,7 @@ btnCadastrar.addEventListener('click', function () {
 btnLogin.addEventListener('click', function () {
 
   firebase.auth().signInWithEmailAndPassword(email.value, senha.value)
-    .then(function (result) {
+    .then(function (_result) {
       // Signed in
       // ...
       alert('Usuário Logado Com Sucesso!');
@@ -88,12 +104,10 @@ btnGmail.addEventListener('click', function () {
     // ...
     alert('login feito com sucesso');
     window.location.replace('site.html');
-   
   }).catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
-   
     // The email of the user's account used.
     var email = error.email;
     // The firebase.auth.AuthCredential type that was used.
@@ -103,7 +117,30 @@ btnGmail.addEventListener('click', function () {
   });
 });
 
-// Testando a brunch
+//não esta funcionando aqui é "esqueci a senha"
+btnForgot.addEventListener('click', function () {
+var emailAddress = ""
+if (user != null) {
+  firebase.auth().SendPasswordResetEmailAsync(emailAddress).ContinueWith(task => {
+    if (task.IsCanceled) {
+      Debug.LogError("SendPasswordResetEmailAsync was canceled.");
+      return;
+    }
+    if (task.IsFaulted) {
+      Debug.LogError("SendPasswordResetEmailAsync encountered an error: " + task.Exception);
+      return;
+    }
 
+    Debug.Log("Password reset email sent successfully.");
+  });
+}
+});
+//função deslogar
 
-
+btnLogout.addEventListener('click', function () {
+  firebase.auth().signOut().then(function(_error) {
+    // Sign-out successful.
+  }).catch(function(_error) {
+    // An error happened.
+});
+});

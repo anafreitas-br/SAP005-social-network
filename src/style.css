@@ -8,9 +8,6 @@ body {
     background-color: #A8e876;
     -webkit-font-smoothing: antialiased !important;
     font-family: 'Roboto Slab', sans-serif;
-  
-
-
 }
 
 header {
@@ -23,17 +20,65 @@ header {
 }
 
 .logo{
-    width: 18vw;
-    height:6vh;
+    width: 30vw;
+    height:10vh;
 }
 
 li {
     list-style: none;
 }
 
+/*Aqui começa a primeira página do site*/
+
 .loginInit {
-    width: 50vw;
+    width: 80vw;
     height: 50vh;
     background-color: #ff934f;
+    align-items: center;
     justify-content: center;
+    margin: 5vh;
+    padding: 3vh;
+    box-shadow: 1px 0 3px rgba(0,0,0,0);
+    border-radius: 8px;
 }
+
+#btnGmail {
+    margin: 8px;
+    width: 63vw;
+    cursor: pointer;
+}
+
+.acessar {
+    margin: 3px;
+}
+
+#email {
+    margin-top: 20px;
+}
+
+#btnLogin {
+    margin: 8px;
+    width: 30vw;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+
+#forgot {
+    margin: 5px;
+    margin-top: 35px;
+}
+
+#btnCadastrar {
+    margin: 5px;
+    margin-top: 20px;
+}
+
+
+#forgot:hover {
+    cursor: pointer;
+    
+}
+
+/*
