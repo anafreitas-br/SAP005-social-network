@@ -1,6 +1,7 @@
 // Este é seu ponto de entrada da sua aplicação
 import { Home } from './pages/home/index.js';
 import { Login } from './pages/login/index.js';
+import { Feed } from './pages/feed/index.js';
 import { onNavigate } from './utils/history.js';
 
 const routeRender = () => {
@@ -8,6 +9,7 @@ const routeRender = () => {
   const routes = {
     '/': Home,
     '/login': Login,
+    '/feed': Feed,
   };
 
   rootDiv.innerHTML = '';
@@ -30,6 +32,13 @@ window.addEventListener('load', () => {
     });
 
     document
+    .getElementById('feed')
+    .addEventListener('click', (e) => {
+      e.preventDefault();
+      onNavigate('/feed');
+    });
+
+    document
     .getElementById('btnCadastrar')
     .addEventListener('click', (e) => {
       e.preventDefault();
@@ -42,6 +51,7 @@ window.addEventListener('load', () => {
       e.preventDefault();
       onNavigate('/forgot');
     });
+
 
    
   routeRender();
@@ -137,10 +147,34 @@ if (user != null) {
 });
 //função deslogar
 
-btnLogout.addEventListener('click', function () {
-  firebase.auth().signOut().then(function(_error) {
+btnLogout.addEventListener('click',  (e) => {
+  e.preventDefault ();
+  firebase.auth().signOut().then((_error) => {
+  console.log ('user signOut');
     // Sign-out successful.
   }).catch(function(_error) {
     // An error happened.
 });
 });
+
+//quando o status do ud=suario mudar 
+function getUser {
+firebase.auth().onAuthStateChange(user =>{
+  if (user) {
+    console.log ('user logged in:',user);
+  }else {
+    console.log ('user logged out');
+  }
+})
+}
+
+// ler e gravar dados do usuario
+var database = firebase.database();
+
+function writeUserData(userId, name, email, imageUrl) {
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
+}
