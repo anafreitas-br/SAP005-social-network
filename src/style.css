@@ -28,6 +28,9 @@ li {
     list-style: none;
 }
 
+#home {
+    text-decoration: none;
+}
 /*Aqui começa a primeira página do site*/
 
 .loginInit {
@@ -38,7 +41,7 @@ li {
     justify-content: center;
     margin: 5vh;
     padding: 3vh;
-    box-shadow: 1px 0 3px rgba(0,0,0,0);
+    box-shadow: 1px 0 10px rgba(0,0,0,0.4);
     border-radius: 8px;
 }
 
@@ -48,8 +51,9 @@ li {
     cursor: pointer;
 }
 
-.acessar {
-    margin: 3px;
+.form {
+    margin: 5px;
+    display: flex;
 }
 
 #email {
@@ -58,12 +62,18 @@ li {
 
 #btnLogin {
     margin: 8px;
+    margin-left: 70px;
     width: 30vw;
     justify-content: center;
     display: flex;
     cursor: pointer;
+    
+
 }
 
+#btnLogin:hover {
+    background:linear-gradient(to bottom, #68b465 5%, #abd5aa 100%);
+    }
 
 #forgot {
     margin: 5px;
