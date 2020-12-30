@@ -28,10 +28,24 @@ li {
     list-style: none;
 }
 
+/*Aqui começa a primeira página do site*/
+
 #home {
     text-decoration: none;
 }
-/*Aqui começa a primeira página do site*/
+
+.Initial {
+    margin: 20px;
+    justify-content: justify;
+
+}
+
+#video {
+    width: 90vw;
+}
+
+/*Aqui começa a segunda página do site*/
+
 
 .loginInit {
     width: 80vw;
@@ -67,20 +81,15 @@ li {
     justify-content: center;
     display: flex;
     cursor: pointer;
-    
-
 }
 
-#btnLogin:hover {
-    background:linear-gradient(to bottom, #68b465 5%, #abd5aa 100%);
-    }
 
 #forgot {
     margin: 5px;
     margin-top: 35px;
 }
 
-#btnCadastrar {
+#btnRegister {
     margin: 5px;
     margin-top: 20px;
 }
@@ -91,4 +100,75 @@ li {
     
 }
 
-/*
+.mainFeed {
+ max-width: 900px;
+ margin: 0 auto;
+}
+
+.newPost {
+   margin: 20px;
+   padding: 25px;
+   width: 90%;
+   height: 180px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   background: #8BA6A9;
+   border-radius: 10px;
+   box-shadow: 1px 0 10px rgba(0,0,0,0.2);
+}
+
+.newPost .infoUser{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.profile {
+    padding: 25px;
+    margin: 0 110px;
+  
+}
+
+.imgUser{ 
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #333;
+    flex-direction: center;
+}
+
+ strong{
+    font-size: 16px;
+    color: #423B24;
+    margin-left: 110px;
+    width: 50px;
+
+}
+
+.newPost .formPost {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.newPost .formPost textarea{
+    margin: 15px 0;
+    padding: 28px;
+    align-items: center;
+    background: #fbfbfb;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    border: 0;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 14px;
+
+}
+
+.newPost .formPost .iconsAndButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
