@@ -113,6 +113,20 @@ export const outLogin = () => {
 };
 
 
+//export const userLike = () => {
+//const database = firebase.database();
+
+    //database.ref("like/amount").on('value', function(snapshot) {
+   //    like(snapshot.val());
+  //  });
+//};
+
+//function like(amount) {
+ //  database.ref('like').set({ amount + 1});
+ //};
+
+
+
 // ler e gravar dados do usuario
 
 //const database = firebase.database();
@@ -124,3 +138,5 @@ export const outLogin = () => {
  //   profile_picture : imageUrl
 //  });
 //}
+
+
