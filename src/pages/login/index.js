@@ -38,7 +38,6 @@ export const Login = () => {
  </footer>
 
   `;
- 
 
   const btnGmail = rootElement.querySelector('#btnGmail')
   btnGmail.addEventListener('click', (event) => {

@@ -18,17 +18,66 @@ export const Feed = () => {
          <form action="" class="formPost">
          <textarea name="textarea" placeholder="Vamos salvar a natureza?"></textarea>
          <div class="iconsAndButton">
-         <div class="icons">
-
-         <button class="btn" id="btnEnjoy">curtir</button>
-         </div>
+         
          <button type="submit" class="btnSubmitForm">Publicar</button>
       
          </div>
          </form>
        </div>
      </div>
-     
+     <ul class="posts">
+     <li class="post">
+     <div class="infoUserPost">
+     <div class="imgUserPost">
+     <div class="nameAndHour">
+     <strong>Fulana</strong>
+     <p>21h</p>
+     </div>
+     </div>
+     </div>
+     <p>sou um teste dhukashkuasgfkasgdfkjsghsdfkhgasdhfgkshdgfshadkgfkjagsdfkjga</p>
+     <div class="actionBtnPost">
+     <button type="button" class="btnLike">
+     <img class="like" src="./images/afirmativo.png" alt="curtir"> Curtir </button>
+     </div>
+     </li>
+     </ul>
+     </br>
+     <ul class="posts">
+     <li class="post">
+     <div class="infoUserPost">
+     <div class="imgUserPost">
+     <div class="nameAndHour">
+     <strong>Fulana</strong>
+     <p>21h</p>
+     </div>
+     </div>
+     </div>
+     <p>sou um teste dhukashkuasgfkasgdfkjsghsdfkhgasdhfgkshdgfshadkgfkjagsdfkjga</p>
+     <div class="actionBtnPost">
+     <button type="button" class="btnLike">
+     <img class="like" src="./images/afirmativo.png" alt="curtir"> Curtir </button>
+     </div>
+     </li>
+     </ul>
+     </br>
+     <ul class="posts">
+     <li class="post">
+     <div class="infoUserPost">
+     <div class="imgUserPost">
+     <div class="nameAndHour">
+     <strong>Fulana</strong>
+     <p>21h</p>
+     </div>
+     </div>
+     </div>
+     <p>sou um teste dhukashkuasgfkasgdfkjsghsdfkhgasdhfgkshdgfshadkgfkjagsdfkjga</p>
+     <div class="actionBtnPost">
+     <button type="button" class="btnLike">
+     <img class="like" src="./images/afirmativo.png" alt="curtir"> Curtir </button>
+     </div>
+     </li>
+     </ul>
    </main>
    <button class="btn " id="btnLogout">
    Sair
@@ -37,6 +86,8 @@ export const Feed = () => {
  </footer>
     
     `;
+//
+
     const btnLogout = feedPage.querySelector('#btnLogout')
     btnLogout.addEventListener('click', (event) => {
       event.preventDefault();
