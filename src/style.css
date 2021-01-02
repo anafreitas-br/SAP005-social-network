@@ -199,7 +199,6 @@ li {
     width: 100%;
    
 }
-
 @media (min-width: 200px) and (max-width: 1400px) {
     .newPost .formPost .iconsAndButton {
         display: flex;
