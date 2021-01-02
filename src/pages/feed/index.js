@@ -86,15 +86,13 @@ export const Feed = () => {
  </footer>
     
     `;
-//
 
-    const btnLogout = feedPage.querySelector('#btnLogout')
-    btnLogout.addEventListener('click', (event) => {
-      event.preventDefault();
-      outLogin();
-    });
-    
-
-    return feedPage;
-  };
+  const btnLogout = feedPage.querySelector('#btnLogout')
+  btnLogout.addEventListener('click', (event) => {
+    event.preventDefault();
+    outLogin();
+  });
   
+
+  return feedPage;
+};
