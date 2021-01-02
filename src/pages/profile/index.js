@@ -1,8 +1,11 @@
+
 export const profile = () => {
-    const rootElement = document.createElement('div');
-    rootElement.innerHTML = `
+    const profilePage = document.createElement('div');
+    profilePage.innerHTML = `
+
        
     `;
     return rootElement;
   };
+  
   
