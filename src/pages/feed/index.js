@@ -1,4 +1,4 @@
-import { outLogin } from "../../services/index.js"
+import { outLogin, loadPosts } from "../../services/index.js"
 
 
 export const Feed = () => {
@@ -14,15 +14,14 @@ export const Feed = () => {
      <div class="newPost">
        <div class="infoUser">
        
-        
-         <form action="" class="formPost">
+      
+         <form action="" id="formPost">
          <textarea name="textarea" id="textPost" placeholder="Vamos salvar a natureza?"></textarea>
          <div class="iconsAndButton">
-         
          <button type="submit" class="btnSubmitForm">Publicar</button>
-      
          </div>
          </form>
+        
         <ul id='posts'>
         </ul>
 
@@ -35,7 +34,7 @@ export const Feed = () => {
       
          <div class="infoUser">
          
-           <form action="" class="formPost">
+           <form action="" id="formPost">
            <textarea name="textarea" placeholder="Vamos salvar a natureza?"></textarea>
            <div class="iconsAndButton">
     
@@ -67,46 +66,22 @@ export const Feed = () => {
     const btnSubmitForm = feedPage.querySelector('.btnSubmitForm')
     btnSubmitForm.addEventListener('click', (event) => {
       event.preventDefault();
-      const textPost = feedPage.querySelector ('#textPost').value;
-      const post = {
-        text: text,
-        user_id: "Daniel",
-        likes: 0,
-      }
-      
-      const postsColletion = firebase.firestore().colletion("posts")
-      postColletion.add(post);
+        loadPosts();
     });
-   
-
-
-    function addPosts(post){
-      const postTemplate =`
-      <li id='${post.id}'>
+    
+     
+      const postTemplate = (post)=>{`
+      <li id='${post.uid}'>
       ${post.data().text} ${post.data().likes}
       </li>
       
       `     
       feedPage.querySelector('posts').innerHTML+= postTemplate;
+  
+    }
 
-    }
-    function loadPosts() {
-      const postsColletion = firebase.firestore().colletion ("posts")
-      feedPage.querySelector('posts').innerHTML = "Carregando...";
-      postsColletion.get().then(snap =>{
-        feedPage.querySelector('posts').innerHTML = "";
-        snap.forEach(post =>{
-          addPost(post);
-        
-        })
-      }) 
-    }
-function deletePost(postId) {
-  const postsColletion = firebase.firestore().colletion ("posts")
-  postsColletion.doc(postId).delete().then (doc =>
-    loadPosts()
-  )
-}
+ 
+   
     return feedPage;
   };
   
