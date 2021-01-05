@@ -45,9 +45,7 @@ import { onNavigate } from './utils/history.js';
         onNavigate('/register');
        });
     
-      
-    
-       
+
       routeRender();
     });
     

@@ -23,8 +23,8 @@ export const Login = () => {
   Entrar
 </button>
 
-    
-    <ul>
+<ul>
+
      <li id="btnRegister">Não possui conta?
        <a href="/register">Cadastre-se</a>
      </li>
