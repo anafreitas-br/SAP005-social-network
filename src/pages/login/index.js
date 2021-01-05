@@ -1,3 +1,4 @@
+
 import { loginGoogle, authLogin, registerUser } from "../../services/index.js"
 
 export const Login = () => {
@@ -23,7 +24,7 @@ export const Login = () => {
 </button>
 
 <ul>
-      
+
      <li id="btnRegister">Não possui conta?
        <a href="/register">Cadastre-se</a>
      </li>
@@ -52,6 +53,7 @@ export const Login = () => {
     event.preventDefault();
     registerUser();
   })
+
 
 
   return rootElement;
