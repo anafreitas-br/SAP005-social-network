@@ -178,9 +178,9 @@ li {
 .btnSubmitForm, #btnLogout, .btnLike{
     cursor: pointer;
 }
-.filePost {
+/* .filePost {
     
-}
+} */
 
 .like {
     width: 20px;

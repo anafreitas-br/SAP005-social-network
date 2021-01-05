@@ -1,3 +1,11 @@
+// with Commonjs syntax (if using Node)
+// const firebase = require("firebase/app");
+// require("firebase/firestore");
+
+// // with ES Modules (if using client-side JS, like React)
+// // import firebase from 'firebase/app';
+// import 'firebase/firestore';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyA7hVcpjh3HMz0WipRpe2-gZJ1U1i38PU4",
@@ -10,6 +18,9 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+
+const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true});
 
 //login com Gmail
 
@@ -82,25 +93,6 @@ export const registerUser = () => {
 };
 
 
- export const passwordForgot = () => {
-  var emailAddress = ""
-  if (user != null) {
-    firebase.auth().SendPasswordResetEmailAsync(emailAddress).ContinueWith(task => {
-      if (task.IsCanceled) {
-        Debug.LogError("SendPasswordResetEmailAsync was canceled.");
-        return;
-      }
-      if (task.IsFaulted) {
-        Debug.LogError("SendPasswordResetEmailAsync encountered an error: " + task.Exception);
-        return;
-      }
-  
-      Debug.Log("Password reset email sent successfully.");
-    });
-  }
-  };
-
-  //
   
 export const outLogin = () => {
   firebase.auth().signOut().then((_error) => {
@@ -111,6 +103,19 @@ export const outLogin = () => {
         alert(`Erro desconhecido: ${error.code}: ${error.message}`);
 });
 };
+
+
+
+// Postagens
+
+// db.collection('comentarios').get().then((snapshot) => {
+
+//     console.log(snapshot.docs);
+
+// });
+
+
+
 
 
 //export const userLike = () => {

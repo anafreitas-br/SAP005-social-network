@@ -11,6 +11,9 @@ export const Home = () => {
       </div>
       <footer>@Rede Social Eco Green - Alunas laboratoria
   </footer>
+
+
+</div>
   `;
   return rootElement;
 };
