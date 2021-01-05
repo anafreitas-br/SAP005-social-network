@@ -1,5 +1,5 @@
 
-import { loginGoogle, authLogin, registerUser, passwordForgot } from "../../services/index.js"
+import { loginGoogle, authLogin, registerUser } from "../../services/index.js"
 
 export const Login = () => {
   const rootElement = document.createElement('div');
@@ -23,11 +23,8 @@ export const Login = () => {
   Entrar
 </button>
 
-<ul>
-   <li id="btnForgot">
-    <a href="/forgot">Esqueceu a senha?</a>
-    </li>
     
+    <ul>
      <li id="btnRegister">Não possui conta?
        <a href="/register">Cadastre-se</a>
      </li>
@@ -57,11 +54,6 @@ export const Login = () => {
     registerUser();
   })
 
-  const btnForgot = rootElement.querySelector ('#btnForgot')
-  btnForgot.addEventListener('click', (event) => {
-    event.preventDefault();
-    passwordForgot();
-  })
 
 
   return rootElement;
