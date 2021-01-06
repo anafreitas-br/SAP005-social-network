@@ -1,11 +1,3 @@
-// with Commonjs syntax (if using Node)
-// const firebase = require("firebase/app");
-// require("firebase/firestore");
-
-// // with ES Modules (if using client-side JS, like React)
-// // import firebase from 'firebase/app';
-// import 'firebase/firestore';
-
 
 const firebaseConfig = {
   apiKey: "AIzaSyA7hVcpjh3HMz0WipRpe2-gZJ1U1i38PU4",
@@ -19,12 +11,117 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 const db = firebase.firestore();
-//db.set({ timestampsInSnapshots: true });
+db.settings({ timestampsInSnapshots: true });
+
+const posts = document.querySelector('#posts');
+const form = document.querySelector('#formPost');
+
+
+//createElement and Render
+ const renderPost = (doc)=>{
+  let li = document.createElement('li');
+  let postagem = document.createElement('span');
+
+  li.setAttribute('data-id', doc.id);
+  postagem.textContent = doc.data().postagem;
+
+  li.appendChild(postagem);
+  posts.appendChild(li);
+
+
+};
+
+export const postar = () => { 
+db.collection('posts').get().then((snapshot)=>{
+     
+  snapshot.docs.forEach(doc =>{
+ 
+ renderPost(doc.data())
+})
+})
+}
+
+//salva dados
+
+export const savingData = () => {
+db.collection('posts'). add ({
+  userPost: form.postagem.value = ''     
+  });
+
+};
 
 
 
-const db = firebase.firestore();
-    db.settings({ timestampsInSnapshots: true});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//export const renderPost = ((doc) => {
+//  const postagem = document.querySelector('#textPost');
+//  let li = document.createElement('li');
+ // let userPost = document.createElement('span');
+//  let cross = document.createElement('div');
+ 
+//  li.setAttribute('data-id', doc.id);
+//    userPost.textContent = doc.data().userPost;
+//    cross.textContent = 'x';
+
+//    li.appendChild(userPost);
+//    li.appendChild(cross);
+
+//    postagem.appendChild(li);
+//})
+
+
+
 
 //login com Gmail
 
@@ -98,7 +195,7 @@ export const registerUser = () => {
 });
 };
 
-  
+  // Função Sair
 export const outLogin = () => {
   firebase.auth().signOut().then((_error) => {
   alert('Volte logo!');
@@ -108,6 +205,39 @@ export const outLogin = () => {
         alert(`Erro desconhecido: ${error.code}: ${error.message}`);
 });
 };
+
+// pegar dados
+
+//export const gettingData = () => {
+
+//db.collection('postar').get().then(snapshot => {
+  //snapshot.docs.forEach(doc => {
+ // renderPost(doc);
+ // });
+//});
+//};
+
+// saving data
+
+ // export const savingData = () => {
+//  db.collection('postar').add({
+ //     userPost: formPost.userPost.value,      
+//  });
+//  formPost.userPost.value = '';
+  
+//};
+
+
+// Postagens
+
+// db.collection('comentarios').get().then((snapshot) => {
+
+//     console.log(snapshot.docs);
+
+// });
+
+
+
 
 
 
@@ -152,29 +282,29 @@ export const outLogin = () => {
 
 
 
-export const loadPosts = () => {
+//export const loadPosts = () => {
 
-  const post = {
-    text: text,
-    user_id: "Daniel",
-      uid:firebase.auth().currentUser.uid,
-      date: new Date(),
-    likes: 0,
-  }
+//  const post = {
+ //   text: text,
+//    user_id: "Daniel",
+//      uid:firebase.auth().currentUser.uid,
+ //     date: new Date(),
+ //   likes: 0,
+ // }
   //const postsColletion = db.colletion("posts")
-  postsColletion.add(post).then(res =>
-      textPost = feedPage.querySelector ('#textPost').value =""
+//  postsColletion.add(post).then(res =>
+ //     textPost = feedPage.querySelector ('#textPost').value =""
 
-  document.querySelector('#posts').innerHTML = "Carregando...";
-db.collection ("posts") .get().then((snapshot) =>{
-    document.querySelector('#posts').innerHTML = "";
-    snapshot.forEach(post =>{
-      addPost(post);
+ // document.querySelector('#posts').innerHTML = "Carregando...";
+//db.collection ("posts") .get().then((snapshot) =>{
+ //   document.querySelector('#posts').innerHTML = "";
+ //   snapshot.forEach(post =>{
+ //     addPost(post);
  
     
-    })
-  }) 
-}
+//    })
+//  }) 
+//}
 
 
 

@@ -169,7 +169,7 @@ li {
 
 }
 
-.newPost #formPost .iconsAndButton {
+.newPost #formPost .buttonForm {
     display: flex;
     align-items: center;
     justify-content: space-between;
