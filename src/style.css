@@ -169,7 +169,7 @@ li {
 
 }
 
-.newPost #formPost .iconsAndButton {
+.newPost #formPost .buttonForm {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -178,9 +178,9 @@ li {
 .btnSubmitForm, #btnLogout, .btnLike{
     cursor: pointer;
 }
-.filePost {
+/* .filePost {
     
-}
+} */
 
 .like {
     width: 20px;
@@ -199,8 +199,6 @@ li {
     width: 100%;
    
 }
-
- 
 
 @media (min-width: 200px) and (max-width: 1400px) {
     .newPost #formPost .iconsAndButton {
