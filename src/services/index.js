@@ -1,3 +1,4 @@
+
 const firebaseConfig = {
   apiKey: "AIzaSyA7hVcpjh3HMz0WipRpe2-gZJ1U1i38PU4",
   authDomain: "rede-social-893e0.firebaseapp.com",
@@ -120,6 +121,8 @@ db.collection('posts'). add ({
 //})
 
 
+
+
 //login com Gmail
 
   export const loginGoogle = () => {
@@ -223,6 +226,19 @@ export const outLogin = () => {
 //  formPost.userPost.value = '';
   
 //};
+
+
+// Postagens
+
+// db.collection('comentarios').get().then((snapshot) => {
+
+//     console.log(snapshot.docs);
+
+// });
+
+
+
+
 
 
 // Postagens

@@ -1,4 +1,8 @@
+
 import { loginGoogle, authLogin, registerUser } from "../../services/index.js";
+
+
+
 
 export const Login = () => {
   const rootElement = document.createElement("div");
@@ -20,11 +24,13 @@ export const Login = () => {
 <button class="btn " id="btnLogin">
   Entrar
 </button>
+
 <ul>     
     <li id="btnRegister">Não possui conta?
       <a href="/register">Cadastre-se</a>
     </li>
-  
+
+
     </ul> 
   </div>
 <footer>@Rede Social Eco Green - Alunas laboratoria
@@ -49,6 +55,7 @@ export const Login = () => {
     event.preventDefault();
     registerUser();
   });
+
 
   return rootElement;
 };

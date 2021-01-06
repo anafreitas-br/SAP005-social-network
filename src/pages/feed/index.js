@@ -2,6 +2,7 @@ import { outLogin,  postar , savingData } from "../../services/index.js"
 
 
 export const Feed = () => {
+
        const feedPage = document.createElement('div');
        feedPage.innerHTML = `
        <div class="profile">
@@ -26,9 +27,36 @@ export const Feed = () => {
           </div>
         </div>
        
+
           
         <main class="mainFeed">
           <div class="newPost">
+
+      
+         <form action="" id="formPost">
+         <textarea name="textarea" id="textPost" placeholder="Vamos salvar a natureza?"></textarea>
+         <div class="iconsAndButton">
+         <button type="submit" class="btnSubmitForm">Publicar</button>
+         </div>
+         </form>
+        
+        <ul id='posts'>
+        </ul>
+
+
+  
+  <h1>Publique o seu Post</h1>
+
+    <div class="content">
+
+        <form id="publicar">
+            <input type="text" name="name" placeholder="Nome">
+            <input type="text" name="comentario" placeholder="Comentário">
+            <button>Adicionar Comentário</button>
+        </form>
+
+        <ul id="post"></ul>
+
         
             <div class="infoUser">
            
@@ -90,7 +118,7 @@ export const Feed = () => {
    
     return feedPage;
   };
-  
+
 
 // <div class="profile">
 // <div class="imgUser">
@@ -133,3 +161,4 @@ export const Feed = () => {
 // </div>
 // </div>
 // </main>
+
