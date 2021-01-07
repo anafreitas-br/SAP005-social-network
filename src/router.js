@@ -45,15 +45,7 @@ import { onNavigate } from './utils/history.js';
         onNavigate('/register');
        });
     
-        document
-        .getElementById('btnForgot')
-        .addEventListener('click', (e) => {
-          e.preventDefault();
-          onNavigate('/forgot');
-        });
-    
-    
-       
+           
       routeRender();
     });
     

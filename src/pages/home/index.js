@@ -1,4 +1,3 @@
-
 export const Home = () => {
   const rootElement = document.createElement('div');
   rootElement.innerHTML = `
@@ -11,6 +10,7 @@ export const Home = () => {
       </div>
       <footer>@Rede Social Eco Green - Alunas laboratoria
   </footer>
+</div>
   `;
   return rootElement;
 };

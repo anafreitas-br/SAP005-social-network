@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    
+    <h1>Publique o seu Post</h1>
+
+    <div class="content">
+
+      <form id="publicar">
+        <input type="text" name="name" placeholder="Nome">
+        <input type="text" name="comentario" placeholder="Comentário">
+        <button>Adicionar Comentário</button>
+    </form>
+
+        <ul id="post"></ul>
+        
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+ TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>  -->
+
+      
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDSGPMFfw7006Se0D-O2B_h5zLBQ8t0F-Q",
+    authDomain: "post-e5598.firebaseapp.com",
+    projectId: "post-e5598",
+    storageBucket: "post-e5598.appspot.com",
+    messagingSenderId: "645171901075",
+    appId: "1:645171901075:web:9a956c6bc609cb9d3dd366",
+    measurementId: "G-LGLVY9S7TE"
+  };
+  // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+   
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+</script>
+
+<script  src="app.js"></script>
+</body>
+</html>

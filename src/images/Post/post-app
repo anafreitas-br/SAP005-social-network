@@ -1,0 +1,51 @@
+const Postagem = document.querySelector('#post');
+const form = document.querySelector('#publicar');
+
+// create element & render cafe
+function renderPost(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let comentario = document.createElement('span');
+    let cross = document.createElement('div');
+
+    li.setAttribute('data-id', doc.id);
+    name.textContent = doc.data().name;
+    comentario.textContent = doc.data().comentario;
+    cross.textContent = 'x';
+
+    li.appendChild(name);
+    li.appendChild(comentario);
+    li.appendChild(cross);
+
+    postagem.appendChild(li);
+
+    // deleting data
+    cross.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let id = e.target.parentElement.getAttribute('data-id');
+        db.collection('postar').doc(id).delete();
+    });
+}
+
+// getting data
+
+    
+
+    db.collection('postar').get().then(snapshot => {
+        snapshot.docs.forEach(doc => {
+        renderPost(doc);
+        });
+    });
+
+// saving data
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    db.collection('postar').add({
+        name: form.name.value,
+        comentario: form.comentario.value
+
+        
+    });
+    form.name.value = '';
+    form.comentario.value = '';
+});

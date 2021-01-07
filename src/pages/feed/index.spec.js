@@ -1,7 +1,7 @@
-import { timeline } from './index.js';
+import { Feed } from './index.js';
 
 describe('timeline', () => {
   it('should be a function', () => {
-    expect(typeof timeline).toBe('function');
+    expect(typeof Feed).toBe('function');
   });
 });
