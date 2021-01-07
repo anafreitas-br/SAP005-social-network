@@ -1,4 +1,4 @@
-import { outLogin,  postar , savingData } from "../../services/index.js"
+import { outLogin, savingData } from "../../services/index.js"
 
 
 export const Feed = () => {
@@ -109,11 +109,16 @@ export const Feed = () => {
       outLogin();
     });
     const btnPost = feedPage.querySelector('.btnSubmitForm')
+    const submitData = feedPage.querySelector('#textPost');
     btnPost.addEventListener('click', (event) => {
       event.preventDefault();
-        postar();
+      savingData(submitData.value)
+      console.log(submitData.value)
+       
     });
 
+<<<<<<< HEAD
+=======
     const form = feedPage.querySelector ('#formPost')
     form.addEventListener ('submit', (event)=>{
       event.preventDefault();
@@ -138,12 +143,15 @@ export const Feed = () => {
 <<<<<<< HEAD
   
 =======
+>>>>>>> 18cf9b04cba3edb07fa1d516cf0a4bfe8a0858af
    
 >>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
     return feedPage;
   };
 
 
+<<<<<<< HEAD
+=======
 // <div class="profile">
 // <div class="imgUser">
 // </div>
@@ -189,3 +197,4 @@ export const Feed = () => {
 =======
 
 >>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
+>>>>>>> 18cf9b04cba3edb07fa1d516cf0a4bfe8a0858af
