@@ -13,7 +13,7 @@ const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true });
 
 const posts = document.querySelector('#posts');
-const form = document.querySelector('#formPost');
+
 
 
 //createElement and Render
@@ -30,94 +30,15 @@ const form = document.querySelector('#formPost');
 
 };
 
-export const postar = () => { 
-db.collection('posts').get().then((snapshot)=>{
-     
-  snapshot.docs.forEach(doc =>{
- 
- renderPost(doc.data())
-})
-})
-}
 
 //salva dados
 
-export const savingData = () => {
+export const savingData = (text) => {
 db.collection('posts'). add ({
-  userPost: form.postagem.value = ''     
+  userPost: text    
   });
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//export const renderPost = ((doc) => {
-//  const postagem = document.querySelector('#textPost');
-//  let li = document.createElement('li');
- // let userPost = document.createElement('span');
-//  let cross = document.createElement('div');
- 
-//  li.setAttribute('data-id', doc.id);
-//    userPost.textContent = doc.data().userPost;
-//    cross.textContent = 'x';
-
-//    li.appendChild(userPost);
-//    li.appendChild(cross);
-
-//    postagem.appendChild(li);
-//})
 
 
 //login com Gmail
@@ -203,120 +124,3 @@ export const outLogin = () => {
 });
 };
 
-// pegar dados
-
-//export const gettingData = () => {
-
-//db.collection('postar').get().then(snapshot => {
-  //snapshot.docs.forEach(doc => {
- // renderPost(doc);
- // });
-//});
-//};
-
-// saving data
-
- // export const savingData = () => {
-//  db.collection('postar').add({
- //     userPost: formPost.userPost.value,      
-//  });
-//  formPost.userPost.value = '';
-  
-//};
-
-
-// Postagens
-
-// db.collection('comentarios').get().then((snapshot) => {
-
-//     console.log(snapshot.docs);
-
-// });
-
-
-
-
-
-//export const userLike = () => {
-//const database = firebase.database();
-
-    //database.ref("like/amount").on('value', function(snapshot) {
-   //    like(snapshot.val());
-  //  });
-//};
-
-//function like(amount) {
- //  database.ref('like').set({ amount + 1});
- //};
-
-
-
-// ler e gravar dados do usuario
-
-
-//const database = firebase.database();
-
-//function writeUserData(userId, name, email, imageUrl) {
-  //firebase.database().ref('users/' + uid).set({
-    //username: name,
-    //email: email,
-    //profile_picture : imageUrl
-  //});
-//}
-
-
-
-//export const loadPosts = () => {
-
-//  const post = {
- //   text: text,
-//    user_id: "Daniel",
-//      uid:firebase.auth().currentUser.uid,
- //     date: new Date(),
- //   likes: 0,
- // }
-  //const postsColletion = db.colletion("posts")
-//  postsColletion.add(post).then(res =>
- //     textPost = feedPage.querySelector ('#textPost').value =""
-
- // document.querySelector('#posts').innerHTML = "Carregando...";
-//db.collection ("posts") .get().then((snapshot) =>{
- //   document.querySelector('#posts').innerHTML = "";
- //   snapshot.forEach(post =>{
- //     addPost(post);
- 
-    
-//    })
-//  }) 
-//}
-
-
-
-
-
-//function deletePost(postId) {
-//const postsColletion = firebase.firestore().colletion ("posts")
-//postsColletion.doc(postId).delete().then (doc =>
-//  loadPosts()
-//)
-//}
-
-// export const passwordForgot = () => {
- // var emailAddress = ""
-  //if (currentUser != null) {
-    //firebase.auth().SendPasswordResetEmailAsync(emailAddress).ContinueWith(task => {
-     // if (task.IsCanceled) {
-     //   Debug.LogError("SendPasswordResetEmailAsync was canceled.");
-     //   return;
-      //}
-    //  if (task.IsFaulted) {
-     //   Debug.LogError("SendPasswordResetEmailAsync encountered an error: " + task.Exception);
-    //    return;
-   //   }
-  
-   //   Debug.Log("Password reset email sent successfully.");
-  //  });
-  //}
-  //};
-
-  //
