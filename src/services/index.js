@@ -1,3 +1,4 @@
+
 const firebaseConfig = {
   apiKey: "AIzaSyA7hVcpjh3HMz0WipRpe2-gZJ1U1i38PU4",
   authDomain: "rede-social-893e0.firebaseapp.com",
@@ -17,7 +18,7 @@ const posts = document.querySelector('#posts');
 
 
 //createElement and Render
- const renderPost = (doc)=>{
+const renderPost = (doc)=>{
   let li = document.createElement('li');
   let postagem = document.createElement('span');
 
@@ -30,6 +31,13 @@ const posts = document.querySelector('#posts');
 
 };
 
+export const postar = () => { 
+db.collection('posts').get().then((snapshot)=>{
+
+
+  snapshot.docs.forEach(doc =>{
+
+renderPost(doc.data())
 
 //salva dados
 
@@ -39,6 +47,23 @@ db.collection('posts'). add ({
   });
 
 };
+
+document.querySelectorAll('.btn-like').forEach((event) => 
+event.addEventListener('click', (event) => {
+  let btnLike = event.target.parentNode.querySelector('.btn-like') 
+  console.log(btnLike.dataset.id) 
+  likePost(btnLike.dataset.id) 
+  })
+
+); 
+
+  export const likePost = (id) => {
+  let postLike = firebase.firestore().collection("post").doc(id); 
+  postLike.update({ likes: firebase.firestore.FieldValue.increment(1) 
+  })
+
+}
+
 
 
 //login com Gmail
@@ -122,5 +147,4 @@ export const outLogin = () => {
     }) .catch(function (error) {
         alert(`Erro desconhecido: ${error.code}: ${error.message}`);
 });
-};
-
+}

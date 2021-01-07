@@ -1,5 +1,15 @@
 import { loginGoogle, authLogin, registerUser } from "../../services/index.js";
 
+
+
+<<<<<<< HEAD
+=======
+import { loginGoogle, authLogin, registerUser } from "../../services/index.js";
+
+
+
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
+
 export const Login = () => {
   const rootElement = document.createElement("div");
   rootElement.innerHTML = `
@@ -8,7 +18,6 @@ export const Login = () => {
     <img src="./images/google.png" width="15px" height="15px"/>
     Iniciar sessão com o Google
   </button>
-
 <form action="Acesso">
   <div class="form">
     <input type="email" class="acessar" id="email" placeholder="Digite o seu email" autocomplete="off">
@@ -20,16 +29,23 @@ export const Login = () => {
 <button class="btn " id="btnLogin">
   Entrar
 </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
 <ul>     
     <li id="btnRegister">Não possui conta?
       <a href="/register">Cadastre-se</a>
     </li>
-  
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
     </ul> 
   </div>
 <footer>@Rede Social Eco Green - Alunas laboratoria
  </footer>
-
   `;
 
   const btnGmail = rootElement.querySelector("#btnGmail");
@@ -49,6 +65,7 @@ export const Login = () => {
     event.preventDefault();
     registerUser();
   });
+
 
   return rootElement;
 };
