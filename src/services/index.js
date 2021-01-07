@@ -31,13 +31,6 @@ const renderPost = (doc)=>{
 
 };
 
-export const postar = () => { 
-db.collection('posts').get().then((snapshot)=>{
-
-
-  snapshot.docs.forEach(doc =>{
-
-renderPost(doc.data())
 
 //salva dados
 
@@ -48,21 +41,6 @@ db.collection('posts'). add ({
 
 };
 
-document.querySelectorAll('.btn-like').forEach((event) => 
-event.addEventListener('click', (event) => {
-  let btnLike = event.target.parentNode.querySelector('.btn-like') 
-  console.log(btnLike.dataset.id) 
-  likePost(btnLike.dataset.id) 
-  })
-
-); 
-
-  export const likePost = (id) => {
-  let postLike = firebase.firestore().collection("post").doc(id); 
-  postLike.update({ likes: firebase.firestore.FieldValue.increment(1) 
-  })
-
-}
 
 
 
@@ -146,5 +124,5 @@ export const outLogin = () => {
   
     }) .catch(function (error) {
         alert(`Erro desconhecido: ${error.code}: ${error.message}`);
-});
-}
+    });
+};

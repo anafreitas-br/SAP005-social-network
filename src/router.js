@@ -44,12 +44,7 @@ import { onNavigate } from './utils/history.js';
          e.preventDefault();
         onNavigate('/register');
        });
-    
-<<<<<<< HEAD
-           
-=======
-
->>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
+         
       routeRender();
     });
     
