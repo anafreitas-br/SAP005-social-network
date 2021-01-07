@@ -18,7 +18,11 @@ const form = document.querySelector('#formPost');
 
 
 //createElement and Render
+<<<<<<< HEAD
 const renderPost = (doc)=>{
+=======
+ const renderPost = (doc)=>{
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
   let li = document.createElement('li');
   let postagem = document.createElement('span');
 
@@ -33,10 +37,17 @@ const renderPost = (doc)=>{
 
 export const postar = () => { 
 db.collection('posts').get().then((snapshot)=>{
+<<<<<<< HEAD
 
   snapshot.docs.forEach(doc =>{
 
 renderPost(doc.data())
+=======
+     
+  snapshot.docs.forEach(doc =>{
+ 
+ renderPost(doc.data())
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
 })
 })
 }
@@ -50,6 +61,7 @@ db.collection('posts'). add ({
 
 };
 
+<<<<<<< HEAD
 document.querySelectorAll('.btn-like').forEach((event) => 
 event.addEventListener('click', (event) => {
   let btnLike = event.target.parentNode.querySelector('.btn-like') 
@@ -67,6 +79,8 @@ event.addEventListener('click', (event) => {
 }
 
 
+=======
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
 
 
 

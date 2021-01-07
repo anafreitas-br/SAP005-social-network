@@ -2,6 +2,13 @@ import { loginGoogle, authLogin, registerUser } from "../../services/index.js";
 
 
 
+<<<<<<< HEAD
+=======
+import { loginGoogle, authLogin, registerUser } from "../../services/index.js";
+
+
+
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
 
 export const Login = () => {
   const rootElement = document.createElement("div");
@@ -22,10 +29,19 @@ export const Login = () => {
 <button class="btn " id="btnLogin">
   Entrar
 </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
 <ul>     
     <li id="btnRegister">Não possui conta?
       <a href="/register">Cadastre-se</a>
     </li>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
     </ul> 
   </div>
 <footer>@Rede Social Eco Green - Alunas laboratoria

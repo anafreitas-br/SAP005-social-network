@@ -27,9 +27,17 @@ export const Feed = () => {
           </div>
         </div>
        
+<<<<<<< HEAD
           
         <main class="mainFeed">
           <div class="newPost">
+=======
+
+          
+        <main class="mainFeed">
+          <div class="newPost">
+
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
       
          <form action="" id="formPost">
          <textarea name="textarea" id="textPost" placeholder="Vamos salvar a natureza?"></textarea>
@@ -40,15 +48,31 @@ export const Feed = () => {
         
         <ul id='posts'>
         </ul>
+<<<<<<< HEAD
   
   <h1>Publique o seu Post</h1>
     <div class="content">
+=======
+
+
+  
+  <h1>Publique o seu Post</h1>
+
+    <div class="content">
+
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
         <form id="publicar">
             <input type="text" name="name" placeholder="Nome">
             <input type="text" name="comentario" placeholder="Comentário">
             <button>Adicionar Comentário</button>
         </form>
+<<<<<<< HEAD
         <ul id="post"></ul>
+=======
+
+        <ul id="post"></ul>
+
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
         
             <div class="infoUser">
            
@@ -96,7 +120,11 @@ export const Feed = () => {
       savingData();
     });
     
+<<<<<<< HEAD
     
+=======
+     
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
     //  const postTemplate = (post)=>{`
     //  <li id='${post.uid}'>
     //  ${post.data().text} ${post.data().likes}
@@ -107,7 +135,11 @@ export const Feed = () => {
   
    // }
 
+<<<<<<< HEAD
   
+=======
+   
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
     return feedPage;
   };
 
@@ -153,3 +185,7 @@ export const Feed = () => {
 // </div>
 // </div>
 // </main>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6148d156a989fbac3101a7cf4acf26784dd36e3a
