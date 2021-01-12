@@ -1,9 +1,9 @@
-# Criando uma Rede Social
+# Projeto Rede Social 
 
-## Índice
+## Eco Green
 
-- [1. Prefácio](#1-prefácio)
-- [2. Resumo do projeto](#2-resumo-do-projeto)
+- [1. Produto](#1-produto)
+- [2. Histórias de usuários](#histórias-de-usuários)
 - [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
 - [4. Considerações gerais](#4-considerações-gerais)
 - [5. Critérios de aceitação mínimos do
@@ -15,7 +15,9 @@
 
 ---
 
-## 1. Prefácio
+## 1. Produto
+
+<img src="./src/images/imagelogo.jpg"/>
 
 Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. As redes sociais
 invadiram nossas vidas. Nós as amamos ou odiamos, e muitas pessoas não conseguem
@@ -27,7 +29,11 @@ para químicos onde os usuários podem publicar artigos a respeito de suas
 pesquisas, comentar os artigos de seus colegas e filtrar artigos de acordo com
 determinadas tags ou popularidade, mais recente ou mais comentado.
 
-## 2. Resumo do projeto
+## 2. Histórias de usuários
+
+<img src="./src/images/Joao-Silva.png"/>
+<img src="./src/images/Maria.png"/>
+
 
 Neste projeto você construirá uma Rede Social sobre o que você e sua equipe
 decidirem. Pode ser, por exemplo, sobre alimentação saudável, feminismo,
