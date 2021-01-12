@@ -14,35 +14,32 @@ db.settings({ timestampsInSnapshots: true });
 
 const posts = document.querySelector('#posts');
 
-
-
-
-//createElement and Render
 const renderPost = (doc) => {
-  let li = document.createElement("li");
-  let userPost = document.createElement("span");
-  let cross = document.createElement("div");
+  const li = document.createElement('li');
+  const userPost = document.createElement('span');
+  const cross = document.createElement('div');
 
   li.setAttribute("data-id", doc.id);
   userPost.textContent = doc.data().userPost;
-   cross.textContent = 'x';
+  cross.textContent = 'x';
 
   li.appendChild(userPost);
-   li.appendChild(cross);
+  li.appendChild(cross);
+  posts.appendChild(li);
 
-  cross.addEventListener('click', (e) =>{
-    e.stopPropagation();
-   let id = e.target.parentElement.getAttribute('data-id');
-  });
 };
 
-//export const deletePost = (userPost) => {
- // const postsCollection = db.collection("posts");
-  //postsCollection
-   // .doc(userPost)
-    //.delete()
-    //.then((doc) => deletePost(doc));
-//};
+ //cross.addEventListener('click', (e) =>{ 
+   //e.preventDefault();
+  //const id = e.target.parentElement.getAttribute('data-id');
+  //db.collection('posts').doc(id).delete();
+// });
+
+// export const deleteNow = (userPost) => {
+//   const postsCollection = db.collection('posts');
+//   postsCollection.doc(userPost).get().then((doc) => 
+//   deleteNow(doc.id).remove()
+// };
 
 export const savingData = (text) => {
   db.collection('posts').add({
@@ -52,19 +49,23 @@ export const savingData = (text) => {
 
 export const postar = () => {
   db.collection('posts').get().then((snapshot) => {
+    console.log(snapshot);
     snapshot.docs.forEach((doc) => {
       renderPost(doc.data());
+      console.log (doc.data());
+
     });
   });
 };
 
-export const deleteNow = (id) => {
-  const inputText = document.querySelector('#textPost');
-  const confirmation = confirm("Tem certeza que deseja excluir esta publicação?");
-  if (confirmation === true) {
-    db.doc(id).delete(inputText.value);
-  }
-};
+//export const deleteNow = (id) => {
+  //const inputText = document.querySelector('#textPost');
+//  const confirmation = confirm("Tem certeza que deseja excluir esta publicação?");
+//  if (confirmation === true) {
+//    const id = e.target.parentElement.getAttribute('data-id');
+//    db.collection('posts').doc(id).get().delete();
+//  }
+//};
 
 export const loginGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();

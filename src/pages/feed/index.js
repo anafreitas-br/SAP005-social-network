@@ -1,4 +1,4 @@
-import { outLogin, savingData, deleteNow } from '../../services/index.js';
+import { outLogin, savingData, postar } from '../../services/index.js';
 
 export const Feed = () => {
   const feedPage = document.createElement('div');
@@ -58,13 +58,23 @@ export const Feed = () => {
   btnPost.addEventListener('click', (event) => {
     event.preventDefault();
     savingData(submitData.value);
+    console.log(submitData.value);
+    postar();
+    console.log(postar());
   });
 
-  const deleteMsg = feedPage.querySelector('.deletePost');
-  deleteMsg.addEventListener('click', (event) => {
-    event.preventDefault();
-    deleteNow();
-  });
+  // const deleteMsg = feedPage.querySelector('.deletePost');
+  // deleteMsg.addEventListener('click', (event) => {
+  //   event.preventDefault();
+  //   deleteNow();
+  // });
+
+
+// const carregapost = () => {
+//   postar();
+//   }
+  
+//   btnPost.addEventListener('click', carregapost)
 
   return feedPage;
 };
