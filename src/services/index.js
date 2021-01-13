@@ -14,27 +14,24 @@ db.settings({ timestampsInSnapshots: true });
 
 const posts = document.querySelector('#posts');
 
-const renderPost = (doc) => {
-  const li = document.createElement('li');
-  const userPost = document.createElement('span');
-  const cross = document.createElement('div');
+// //const renderPost = (doc) => {
+//   const li = document.createElement('li');
+//   const userPost = document.createElement('span');
+//  // const cross = document.createElement('div');
 
-  li.setAttribute("data-id", doc.id);
-  userPost.textContent = doc.data().userPost;
-  cross.textContent = 'x';
+//   li.setAttribute("data-id", doc.id);
+//   userPost.textContent = doc.data().userPost;
+//   //cross.textContent = 'x';
 
-  li.appendChild(userPost);
-  li.appendChild(cross);
-  posts.appendChild(li);
+//   li.appendChild(userPost);
+//   // li.appendChild(cross);
+//   posts.appendChild(li);
+// };
 
-};
-
- //cross.addEventListener('click', (e) =>{ 
-   //e.preventDefault();
-  //const id = e.target.parentElement.getAttribute('data-id');
-  //db.collection('posts').doc(id).delete();
-// });
-
+// export const deleteNow = (e) => {
+//   const id = e.target.parentElement.getAttribute('data-id');
+//   db.collection('posts').doc(id).delete();
+//   deleteNow();
 // export const deleteNow = (userPost) => {
 //   const postsCollection = db.collection('posts');
 //   postsCollection.doc(userPost).get().then((doc) => 
@@ -44,16 +41,26 @@ const renderPost = (doc) => {
 export const savingData = (text) => {
   db.collection('posts').add({
     userPost: text,
+    userUid: firebase.auth().currentUser.uid,
   });
 };
 
-export const postar = () => {
+export const postar = (text) => {
   db.collection('posts').get().then((snapshot) => {
-    console.log(snapshot);
-    snapshot.docs.forEach((doc) => {
-      renderPost(doc.data());
-      console.log (doc.data());
+    snapshot.forEach((doc) => {
 
+      const li = document.createElement('li');
+      const userPost = document.createElement('span');
+
+      li. setAttribute('data-id', doc.data().userUid);
+      userPost.textContent = doc.data().userPost;
+
+      li.appendChild(userPost);
+      posts.appendChild(li);
+      
+
+        postar(doc.data());
+    
     });
   });
 };

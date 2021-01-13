@@ -53,28 +53,31 @@ export const Feed = () => {
     outLogin();
   });
 
+ 
+  
   const btnPost = feedPage.querySelector('.btnSubmitForm');
   const submitData = feedPage.querySelector('#textPost');
   btnPost.addEventListener('click', (event) => {
     event.preventDefault();
     savingData(submitData.value);
-    console.log(submitData.value);
     postar();
-    console.log(postar());
   });
 
-  // const deleteMsg = feedPage.querySelector('.deletePost');
-  // deleteMsg.addEventListener('click', (event) => {
+  const carregaPost = () => {
+    const template = feedPage.querySelector('#posts');
+    postar(template);
+  }
+
+  btnPost.addEventListener('click', carregaPost())
+
+  //  const deleteMsg = feedPage.querySelector('.deletePost');
+  //  deleteMsg.addEventListener('click', (event) => {
   //   event.preventDefault();
-  //   deleteNow();
-  // });
+  //    deleteNow();
+  //  });
 
+ 
 
-// const carregapost = () => {
-//   postar();
-//   }
-  
-//   btnPost.addEventListener('click', carregapost)
 
   return feedPage;
 };
