@@ -17,17 +17,9 @@
 
 ## 1. Produto
 
-<img src="./src/images/imagelogo.jpg"/>
+<img src="./src/images/imagelogo.jpg" justify-content="center"/> 
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. As redes sociais
-invadiram nossas vidas. Nós as amamos ou odiamos, e muitas pessoas não conseguem
-viver sem elas.
-
-Há redes sociais de todo tipo para todos os tipos de interesse. Por exemplo: em
-uma rodada de financiamento com investidores, foi apresentada uma rede social
-para químicos onde os usuários podem publicar artigos a respeito de suas
-pesquisas, comentar os artigos de seus colegas e filtrar artigos de acordo com
-determinadas tags ou popularidade, mais recente ou mais comentado.
+Seguindo as orientações de Desenvolvemos uma página direcionada a jogadores iniciantes de Pokémon Go. Nela os usuários podem encontrar informações essenciais e de forma clara sobre pokémons encontrados no jogo.
 
 ## 2. Histórias de usuários
 
