@@ -243,3 +243,10 @@ header {
   justify-content: center;
 }
 }
+
+@media screen (max-width: 1750px) {
+
+  .newPost #formPost .iconsAndButton {
+    width: 58.5vw;
+  };
+};
