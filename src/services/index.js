@@ -1,18 +1,5 @@
-const firebaseConfig = {
-  apiKey: 'AIzaSyA7hVcpjh3HMz0WipRpe2-gZJ1U1i38PU4',
-  authDomain: 'rede-social-893e0.firebaseapp.com',
-  projectId: 'rede-social-893e0',
-  storageBucket: 'rede-social-893e0.appspot.com',
-  messagingSenderId: '332323313520',
-  appId: '1:332323313520:web:1d4c3e0c797716de47a1b5',
-  measurementId: 'G-VWNQS3P4HW',
-};
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 const db = firebase.firestore();
-db.settings({ timestampsInSnapshots: true });
-
-const posts = document.querySelector('#posts');
+//db.settings({ timestampsInSnapshots: true });
 
 // //const renderPost = (doc) => {
 //   const li = document.createElement('li');
@@ -38,32 +25,11 @@ const posts = document.querySelector('#posts');
 //   deleteNow(doc.id).remove()
 // };
 
-export const savingData = (text) => {
-  db.collection('posts').add({
-    userPost: text,
-    userUid: firebase.auth().currentUser.uid,
-  });
+export const savingData = (post) => {
+  db.collection('posts').add(post);
 };
 
-export const postar = (text) => {
-  db.collection('posts').get().then((snapshot) => {
-    snapshot.forEach((doc) => {
-
-      const li = document.createElement('li');
-      const userPost = document.createElement('span');
-
-      li. setAttribute('data-id', doc.data().userUid);
-      userPost.textContent = doc.data().userPost;
-
-      li.appendChild(userPost);
-      posts.appendChild(li);
-      
-
-        postar(doc.data());
-    
-    });
-  });
-};
+export const getPosts = () => db.collection('posts').get();
 
 //export const deleteNow = (id) => {
   //const inputText = document.querySelector('#textPost');

@@ -31,11 +31,6 @@ window.addEventListener('load', () => {
     onNavigate('/feed');
   });
 
-  document.getElementById('btnRegister').addEventListener('click', (e) => {
-    e.preventDefault();
-    onNavigate('/register');
-  });
-
   routeRender();
 });
 routeRender();

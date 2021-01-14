@@ -264,3 +264,16 @@ firebase.database().ref('users/' + userId).set({
 // </div>
 // </div>
 // </main>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script> 
+export const createPost = (postText) => { if (postText.search('https://firebasestorage.googleapis.com') !== -1) { firebase .firestore() .collection('posts') .add({ user: `${firebase.auth().currentUser.email}`, text: '', data: getData(), likes: [], comments: [], url: `<img class='post-area-image' src='${postText}'>`, }); } else { firebase .firestore() .collection('posts') .add({ user: `${firebase.auth().currentUser.email}`, data: getData(), text: postText, likes: [], comments: [], url: '', }); } }; 
+
+
+index.
+const getTextToPublish = () => { document.querySelector('#publish-btn').addEventListener('click', () => { createPost(document.querySelector('#postText').value); document.querySelector('#postText').value = ''; }); }; 
+
+ //document.getElementById('btnRegister').addEventListener('click', (e) => {
+  //  e.preventDefault();
+  //  onNavigate('/register');
+ // });

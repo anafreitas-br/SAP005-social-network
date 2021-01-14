@@ -5,11 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="bower_components/firebaseui/dist/firebaseui.css"
-    />
     <link rel="icon" href="./images/186140.png" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -19,12 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <title>Eco Green</title>
   </head>
   <body>
     <header>
-      <img class="logo" src="images/imagelogo.jpg" alt="Logo Eco Green" />
+      <img class="logo" src="images/imagelogo.jpg" alt="Logo Eco Green"/>
       <nav class="nav">
         <ul>
           <li id="home">
@@ -40,20 +34,21 @@
       </nav>
     </header>
 
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-functions.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-remote-config.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-performance.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-init.js"></script>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="/__/firebase/7.23.0/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="/__/firebase/7.23.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="/__/firebase/7.23.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.23.0/firebase-firestore.js"></script>
+
+    <script src="/__/firebase/init.js"></script>
 
     <div id="root"></div>
     <script type="module" src="router.js"></script>
-    <script type="module" src="./services/index.js"></script>
-    <script type="module" src="history.js"></script>
   </body>
 </html>
