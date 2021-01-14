@@ -7,6 +7,24 @@
 
 //); 
 
+
+
+
+//export const deleteNow = (id) => {
+  //const inputText = document.querySelector('#textPost');
+//  const confirmation = confirm("Tem certeza que deseja excluir esta publicação?");
+//  if (confirmation === true) {
+//    const id = e.target.parentElement.getAttribute('data-id');
+//    db.collection('posts').doc(id).get().delete();
+//  }
+//};
+
+  //  const deleteMsg = feedPage.querySelector('.deletePost');
+  //  deleteMsg.addEventListener('click', (event) => {
+  //   event.preventDefault();
+  //    deleteNow();
+  //  });
+
  // export const likePost = (id) => {
  // let postLike = firebase.firestore().collection("post").doc(id); 
  // postLike.update({ likes: firebase.firestore.FieldValue.increment(1) 
@@ -277,3 +295,29 @@ const getTextToPublish = () => { document.querySelector('#publish-btn').addEvent
   //  e.preventDefault();
   //  onNavigate('/register');
  // });
+
+ //db.settings({ timestampsInSnapshots: true });
+
+// //const renderPost = (doc) => {
+//   const li = document.createElement('li');
+//   const userPost = document.createElement('span');
+//  // const cross = document.createElement('div');
+
+//   li.setAttribute("data-id", doc.id);
+//   userPost.textContent = doc.data().userPost;
+//   //cross.textContent = 'x';
+
+//   li.appendChild(userPost);
+//   // li.appendChild(cross);
+//   posts.appendChild(li);
+// };
+
+// export const deleteNow = (e) => {
+//   const id = e.target.parentElement.getAttribute('data-id');
+//   db.collection('posts').doc(id).delete();
+//   deleteNow();
+// export const deleteNow = (userPost) => {
+//   const postsCollection = db.collection('posts');
+//   postsCollection.doc(userPost).get().then((doc) => 
+//   deleteNow(doc.id).remove()
+// };
