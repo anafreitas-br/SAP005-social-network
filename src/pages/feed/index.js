@@ -4,6 +4,7 @@ export const Feed = () => {
   const feedPage = document.createElement('div');
   feedPage.innerHTML = `
       <div class="profile">
+      <button class="btn " id="btnLogout">Sair</button>
         <div class="imgUser">
         </div>
       </div>
@@ -24,8 +25,7 @@ export const Feed = () => {
         </main> 
         <ul id='posts'>
         </ul>      
-        
-    <button class="btn " id="btnLogout">Sair</button>
+    
   <footer>@Rede Social Eco Green - Alunas laboratoria
   </footer>
     
@@ -59,12 +59,12 @@ export const Feed = () => {
   };
   const postsUl = feedPage.querySelector('#posts');
   getPosts().then((snapshot) => {
-    snapshot.forEach((doc) => { 
+    snapshot.forEach((doc) => {
       postsUl.appendChild(createPostElement(doc.data()));
     });
   });
-  
-  const template = feedPage.querySelector('#posts');
+
+  // const template = feedPage.querySelector('#posts');
 
   const btnLogout = feedPage.querySelector('#btnLogout');
   btnLogout.addEventListener('click', (event) => {
@@ -80,7 +80,7 @@ export const Feed = () => {
       userPost: submitData.value,
       like: 0,
       userUid: firebase.auth().currentUser.email,
-    // data: ,
+      // data: ,
     };
     savingData(post);
     postsUl.prepend(createPostElement(post));
