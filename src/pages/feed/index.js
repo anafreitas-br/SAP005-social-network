@@ -38,8 +38,11 @@ export const Feed = () => {
     userPost.classList.add('mainFeed');
     userPost.innerHTML = `
         <div class="newPost">
+
           <div class="infoUser">
+
             <form action="" class="formPost" id="${id}">
+
             <input type="text" name="textarea" id="textPostUser" value = "${post.userPost}"></input>
             <div class="iconsAndButton">
               <button type="button" class="btnLike">
@@ -83,6 +86,20 @@ export const Feed = () => {
   btnLogout.addEventListener('click', (event) => {
     event.preventDefault();
     outLogin();
+  });
+
+  //like Unlike
+
+  document.querySelectorAll(".btnLike").forEach((btnLikePost) => {
+    btnLikePost.addEventListener("click", (event) => {
+      event.preventDefault();
+      let btnLike = event.target.parentNode;
+      console.log(btnLike.dataset.id);
+      likePost(btnLike.dataset.id);
+      unlikePost(btnLike.dataset.id);
+      savingData(submitData.value);
+      console.log(submitData.value);
+    });
   });
 
   const btnPost = feedPage.querySelector('.btnSubmitForm');

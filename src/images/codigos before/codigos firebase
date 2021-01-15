@@ -6,6 +6,47 @@
  // })
 
 //); 
+// export const deletePost = (id) => {
+//   db.collection('posts').doc(id).delete().then((e) => {
+//     const containerFeed = e.target.parentNode.parentNode.parentNode;
+//     deletePost(containerFeed.id).then(() => {
+//       containerFeed.remove();
+//     });
+//   });
+// };
+
+// export const IsCurrentUser = (notLoggedPage) => {
+//   firebase.auth().onAuthStateChanged((user) => {
+//       if (user) {
+//         window.location.pathname = '/feed';
+//       } else {
+//         window.location.pathname = notLoggedPage;
+//       }
+//     });
+// };
+
+
+  // const btnDel = feedPage.querySelector('.deletePost');
+  // btnDel.addEventListener('click', (event) => {
+  //   event.preventDefault();
+  //   deletePost();
+  // });
+
+
+//export const deleteNow = (id) => {
+  //const inputText = document.querySelector('#textPost');
+//  const confirmation = confirm("Tem certeza que deseja excluir esta publicação?");
+//  if (confirmation === true) {
+//    const id = e.target.parentElement.getAttribute('data-id');
+//    db.collection('posts').doc(id).get().delete();
+//  }
+//};
+
+  //  const deleteMsg = feedPage.querySelector('.deletePost');
+  //  deleteMsg.addEventListener('click', (event) => {
+  //   event.preventDefault();
+  //    deleteNow();
+  //  });
 
  // export const likePost = (id) => {
  // let postLike = firebase.firestore().collection("post").doc(id); 
@@ -14,15 +55,56 @@
 
 //}
 
-//export const postar = () => { 
-//db.collection('posts').get().then((snapshot)=>{
-     
- // snapshot.docs.forEach(doc =>{
- 
- //renderPost(doc.data())
-//})
-//})
+//confirmar envio de mensagem
+firebase.database().ref('users/' + userId).set({
+  username: name,
+  email: email,
+  profile_picture : imageUrl
+}, (error) => {
+  if (error) {
+    // The write failed...
+  } else {
+    // Data saved successfully!
+  }
+});
+
+//
+    //const btnLike = feedPage.querySelector ('.btnLike')
+    //btnLike = addEventListener('click', (event)=>{
+    //  event.preventDefault();
+      //userLike();
+    //})
+
+//escrever novo post
+//function writeNewPost(uid, username, picture, title, body) {
+  // A post entry.
+  //var postData = {
+  //  author: username,
+  //  uid: uid,
+  //  body: body,
+  //  title: title,
+   // like: 0,
+   // authorPic: picture
+ // };
+
+  // Get a key for a new Post.
+ // var newPostKey = firebase.database().ref().child('posts').push().key;
+
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+ // var updates = {};
+//  updates['/posts/' + newPostKey] = postData;
+//  updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+
+ // return firebase.database().ref().update(updates);
 //}
+//
+    //const btnLike = feedPage.querySelector ('.btnLike')
+    //btnLike = addEventListener('click', (event)=>{
+    //  event.preventDefault();
+      //userLike();
+    //})
+    
+//
 
 //export const renderPost = ((doc) => {
 //  const postagem = document.querySelector('#textPost');
@@ -127,7 +209,19 @@
 //  }) 
 //}
 
-
+//export const deletePost = () => {
+//  return output =
+  // [START delete_document]
+//  db.collection("posts").doc("userPost").delete().then(function () {
+  //  const confirmation = confirm("Tem certeza que deseja excluir esta publicação?");
+ // if (confirmation === true) {
+ //   db.collection('post').deletePost(userPost);
+   //   console.log("Document successfully deleted!");
+//  }).catch(function(error) {
+//      console.error("Error removing document: ", error);
+ // });
+  // [END delete_document]
+//});
 
 
 
@@ -211,3 +305,42 @@
 // </div>
 // </div>
 // </main>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script> 
+export const createPost = (postText) => { if (postText.search('https://firebasestorage.googleapis.com') !== -1) { firebase .firestore() .collection('posts') .add({ user: `${firebase.auth().currentUser.email}`, text: '', data: getData(), likes: [], comments: [], url: `<img class='post-area-image' src='${postText}'>`, }); } else { firebase .firestore() .collection('posts') .add({ user: `${firebase.auth().currentUser.email}`, data: getData(), text: postText, likes: [], comments: [], url: '', }); } }; 
+
+
+index.
+const getTextToPublish = () => { document.querySelector('#publish-btn').addEventListener('click', () => { createPost(document.querySelector('#postText').value); document.querySelector('#postText').value = ''; }); }; 
+
+ //document.getElementById('btnRegister').addEventListener('click', (e) => {
+  //  e.preventDefault();
+  //  onNavigate('/register');
+ // });
+
+ //db.settings({ timestampsInSnapshots: true });
+
+// //const renderPost = (doc) => {
+//   const li = document.createElement('li');
+//   const userPost = document.createElement('span');
+//  // const cross = document.createElement('div');
+
+//   li.setAttribute("data-id", doc.id);
+//   userPost.textContent = doc.data().userPost;
+//   //cross.textContent = 'x';
+
+//   li.appendChild(userPost);
+//   // li.appendChild(cross);
+//   posts.appendChild(li);
+// };
+
+// export const deleteNow = (e) => {
+//   const id = e.target.parentElement.getAttribute('data-id');
+//   db.collection('posts').doc(id).delete();
+//   deleteNow();
+// export const deleteNow = (userPost) => {
+//   const postsCollection = db.collection('posts');
+//   postsCollection.doc(userPost).get().then((doc) => 
+//   deleteNow(doc.id).remove()
+// };

@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 const db = firebase.firestore();
 
 export const savingData = (post) => {
@@ -11,79 +12,27 @@ export const loginGoogle = () => {
   firebase
     .auth()
     .signInWithPopup(provider)
-    .then(function (result) {
+    .then((result) => {
       const token = result.credential.accessToken;
       const user = result.user;
-      alert('login feito com sucesso');
+      alert("login feito com sucesso");
       window.location.replace('/feed');
     })
-    .catch(function (error) {
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      let email = error.email;
-      let credential = error.credential;
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const email = error.email;
+      const credential = error.credential;
     });
 };
-//like Unlike
-
-export const likeFirebase = (id) => firestore().doc(id).update({
-  likes: firebase.firestore.FieldValue.increment(1),
-})
-  .then(() => true)
-  .catch((error) => error);
-
-
-  //likeFirebase(posts)
-  //.then(()  => {
-    alert('Curtida realizada!');
-    bottonLike.classList.add('btnLike');
-    bottonLike.innerHTML = "Curtiu!";
-  
-  
-  .catch(() => {
-    alert('Não foi dessa vez');
-  })
-
-  export const likePost = (id, userID) => {
-    const userLike = firebase.firestore.FieldValue.arrayUnion(userID);
-    const postLike = firebase.firestore().collection("post").doc(id);
-    return postLike.update({
-      usersLike: userLike,
-    });
-  };
-
-  export const removeLike = (id, userId) => {
-    const userLike = firebase.firestore.FieldValue.arrayRemove(userId);
-    const postLike = firebase.firestore().collection("post").doc(id);
-    return postLike.update({
-      usersLike: userLike,
-    });
-  };
-
-  export const dislikePost = (id, userID) => {
-    const userDislike = firebase.firestore.FieldValue.arrayUnion(userID);
-    const postDislike = firebase.firestore().collection("post").doc(id);
-    return postDislike.update({
-      usersDislike: userDislike,
-    });
-  };
-
-  export const removeDislike = (id, userId) => {
-    const userDislike = firebase.firestore.FieldValue.arrayRemove(userId);
-    const postDislike = firebase.firestore().collection("post").doc(id);
-    return postDislike.update({
-      usersDislike: userDislike,
-    });
-  };
-
 
 export const authLogin = () => {
-  let email = document.getElementById('email');
-  let senha = document.getElementById('senha');
+  const email = document.getElementById('email');
+  const senha = document.getElementById('senha');
   firebase
     .auth()
     .signInWithEmailAndPassword(email.value, senha.value)
-    .then(function (_result) {
+    .then(() => {
       alert('Usuário Logado Com Sucesso!');
       window.location.replace('/feed');
     })
@@ -101,19 +50,30 @@ export const authLogin = () => {
       }
     });
 };
+//like Unlike
+
+
+
+  export const likePost = (id, userID) => {
+    const userLike = firebase.firestore.FieldValue.arrayUnion(userID);
+    const postLike = firebase.firestore().collection("post").doc(id);
+    return postLike.update({
+      usersLike: userLike,
+    });
+  };
 
 export const registerUser = () => {
-  let email = document.getElementById('email');
-  let senha = document.getElementById('senha');
+  const email = document.getElementById('email');
+  const senha = document.getElementById('senha');
   firebase
     .auth()
     .createUserWithEmailAndPassword(email.value, senha.value)
-    .then(function (_result) {
+    .then(() => {
       alert('Usuário Cadastrado Com Sucesso!');
 
       window.location.replace('/feed');
     })
-    .catch(function (error) {
+    .catch((error) => {
       switch (error.code) {
         case 'auth/email-already-in-use':
           alert('O endereço de email já está cadastrado.');
@@ -135,11 +95,25 @@ export const outLogin = () => {
   firebase
     .auth()
     .signOut()
-    .then((_error) => {
+    .then(() => {
       alert('Volte logo!');
       window.location.replace('/');
     })
-    .catch(function (error) {
+    .catch((error) => {
       alert(`Erro desconhecido: ${error.code}: ${error.message}`);
+    });
+};
+
+export const likeFirebase = (id) => firestore().doc(id).update({
+  likes: firebase.firestore.FieldValue.increment(1),
+})
+
+export const deletePost = (id) => {
+  db.collection('posts').doc(id).delete()
+    .then(() => {
+      console.log('Apagou!');
+    })
+    .catch((error) => {
+      console.error('Erro ao excluir o post: ', error);
     });
 };

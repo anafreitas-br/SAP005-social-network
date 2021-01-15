@@ -1,6 +1,8 @@
 import { Home } from './pages/home/index.js';
 import { Login } from './pages/login/index.js';
 import { Feed } from './pages/feed/index.js';
+import { Register } from './pages/register/index.js';
+
 import { onNavigate } from './utils/history.js';
 
 const routeRender = () => {
@@ -9,10 +11,10 @@ const routeRender = () => {
     '/': Home,
     '/login': Login,
     '/feed': Feed,
-  };
-
-  rootDiv.innerHTML = '';
-  rootDiv.appendChild(routes[window.location.pathname]());
+    '/register':Register,
+    };
+      rootDiv.innerHTML = '';
+      rootDiv.appendChild(routes[window.location.pathname]());
 };
 
 window.addEventListener('popstate', routeRender);
@@ -31,6 +33,10 @@ window.addEventListener('load', () => {
     onNavigate('/feed');
   });
 
+  document.getElementById('register').addEventListener('click', (e) => {
+    e.preventDefault();
+    onNavigate('/register');
+  });
   routeRender();
 });
-routeRender();
+
