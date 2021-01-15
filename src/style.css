@@ -1,209 +1,241 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #A8e876;
-    -webkit-font-smoothing: antialiased !important;
-    font-family: 'Roboto Slab', sans-serif;
+  background-image: url("./images/design-background.png");
+  -webkit-font-smoothing: antialiased !important;
+  font-family: "Roboto Slab", sans-serif;
 }
 
 header {
-    width: 100%;
-    height: 10vh;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 10vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo{
-    width: 30vw;
-    height:10vh;
+.logo {
+  width: 30vw;
+  height: 10vh;
+  margin-left: 48px;
+  justify-content: center;
+  display: flex;
+}
+
+.two {
 }
 
 li {
-    list-style: none;
+  list-style: none;
+}
+
+.one,
+.two,
+.three {
+  visibility: hidden;
 }
 
 /*Aqui começa a primeira página do site*/
 
 #home {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .Initial {
-    margin: 20px;
-    justify-content: justify;
-
+  margin: 20px;
+  justify-content: justify;
 }
 
 #video {
-    width: 90vw;
+  width: 90vw;
 }
 
 /*Aqui começa a segunda página do site*/
 
-
 .loginInit {
-    width: 80vw;
-    height: 50vh;
-    background-color: #ff934f;
-    align-items: center;
-    justify-content: center;
-    margin: 5vh;
-    padding: 3vh;
-    box-shadow: 1px 0 10px rgba(0,0,0,0.4);
-    border-radius: 8px;
+  width: 80vw;
+  height: 50vh;
+  background-color: #ff934f;
+  align-items: center;
+  justify-content: center;
+  margin: 5vh;
+  padding: 3vh;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
 }
 
 #btnGmail {
-    margin: 8px;
-    width: 63vw;
-    cursor: pointer;
+  margin: 8px;
+  width: 63vw;
+  cursor: pointer;
 }
 
 .form {
-    margin: 5px;
-    display: flex;
+  margin: 5px;
+  display: flex;
 }
 
 #email {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #btnLogin {
-    margin: 8px;
-    margin-left: 70px;
-    width: 30vw;
-    justify-content: center;
-    display: flex;
-    cursor: pointer;
+  margin: 8px;
+  margin-left: 70px;
+  width: 30vw;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
 }
 
-
 #forgot {
-    margin: 5px;
-    margin-top: 35px;
+  margin: 5px;
+  margin-top: 35px;
 }
 
 #btnRegister {
-    margin: 5px;
-    margin-top: 20px;
+  margin: 5px;
+  margin-top: 20px;
 }
 
-
 #forgot:hover {
-    cursor: pointer;
-    
+  cursor: pointer;
 }
 
 .mainFeed {
- max-width: 900px;
- margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .newPost {
-   margin: 20px;
-   padding: 25px;
-   width: 90%;
-   height: 180px;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   background: #8BA6A9;
-   border-radius: 10px;
-   box-shadow: 1px 0 10px rgba(0,0,0,0.2);
+  margin: 20px;
+  padding: 25px;
+  width: 90%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #8ba6a9;
+  border-radius: 10px;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.newPost .infoUser{
-   display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.newPost .infoUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .profile {
-    padding: 25px;
-    margin: 0 110px;
-  
+  padding: 25px;
+  margin: 0 110px;
 }
 
-.imgUser{ 
-    display: flex;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #333;
-    flex-direction: center;
+.imgUser {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-image: url("./images/mulher-avatar.png");
+  background-size: 80px;
+  flex-direction: center;
 }
 
- strong{
-    font-size: 16px;
-    color: #423B24;
-    margin-left: 110px;
-    width: 50px;
-
+strong {
+  font-size: 16px;
+  color: #423b24;
+  margin-left: 110px;
+  width: 50px;
 }
 
+#textPost,
+#textPostUser {
+  margin-top: 10px;
+  width: 75vw;
+  height: 17vh;
+  border-radius: 5px;
+  display: flex;
+}
 .newPost #formPost {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.newPost #formPost textarea{
-    height: 90px;
-    margin: 15px 0;
-    padding: 28px;
-    align-items: center;
-    background: #fbfbfb;
-    border-radius: 10px;
-    resize: none;
-    outline: none;
-    border: 0;
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 14px;
-    display: flex;
-
+.newPost #formPost textarea {
+  height: 90px;
+  margin: 15px 0;
+  padding: 28px;
+  align-items: center;
+  background: #fbfbfb;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  border: 0;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 14px;
+  display: flex;
 }
 
 .newPost #formPost .buttonForm {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.btnSubmitForm, #btnLogout, .btnLike{
-    cursor: pointer;
+.btnSubmitForm,
+#btnLogout,
+.btnLike {
+  cursor: pointer;
 }
 /* .filePost {
-    
-} */
+      
+  } */
+
+.btnSubmitForm,
+.deletePost {
+  margin-top: 5px;
+}
 
 .like {
-    width: 20px;
-    justify-content: space-between;
+  width: 20px;
+  justify-content: space-between;
 }
 
 .post {
-    background: #fff;
-    box-shadow: 1px 0 10px rgba(0,0,0,0.1);
+  background: #fff;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.1);
 }
 .post .posts {
-    margin-top: 50px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 25px;
-    width: 100%;
-   
+  margin-top: 50px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  width: 100%;
 }
 
-@media (min-width: 200px) and (max-width: 1400px) {
-    .newPost #formPost .iconsAndButton {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-   }
+@media screen and (min-width: 550px) and (max-width: 1400px) {
+  .newPost #formPost .iconsAndButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 13vw;
+    height: 15vh;
+  }
+
+  header {
+    width: 100%;
+    height: 15vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

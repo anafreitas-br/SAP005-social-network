@@ -5,3 +5,5 @@ describe('feed', () => {
     expect(typeof Feed).toBe('function');
   });
 });
+
+

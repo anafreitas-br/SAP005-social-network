@@ -1,5 +1,5 @@
 <body>
-  <div >
+  <div>
     <ng-view></ng-view>
   </div>
- </body>
+</body>;
