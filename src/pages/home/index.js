@@ -10,7 +10,7 @@ export const Home = () => {
       gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <footer>
-    <p>© Rede Social Eco Green - Desenvolvido por <a href='https://github.com/larissamiyaji'>Larissa</a>, <a href='https://github.com/kellyalves87'>Kelly</a> e <a href='https://github.com/mirescordeiro'>Tamires</a></p>
+    <p>© Rede Social Eco Green - Desenvolvido por <a href='https://github.com/edilenefern'>Edilene Fernandes</a>, <a href='https://github.com/Fernandapy'>Fernanda Lima</a> e <a href='https://github.com/anafreitas-br'>Ana Freitas</a></p>
   </footer>
 </div>
   `;
