@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+.menu {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+  text-indent: 2em;
+}
 
 body {
   background-image: url("./images/design-background.png");
@@ -27,72 +33,44 @@ header {
   display: flex;
 }
 
-.two {
-  
-}
-
-
 li {
   list-style: none;
 }
 
-.one,
-.two,
-.three {
-  visibility: hidden;
-}
-
-/*Aqui começa a primeira página do site*/
-
-#home {
-  text-decoration: none;
-}
-
 .Initial {
   margin: 20px;
-  justify-content: justify;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: rgb(4, 58, 4);
 }
 
 #video {
   width: 90vw;
+  height: 30vw;
 }
 
 /*Aqui começa a segunda página do site*/
 
-.loginInit {
-  width: 80vw;
-  height: 50vh;
-  background-color: #ff934f;
+.container {
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  margin: 5vh;
-  padding: 3vh;
-  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
+  background-color: #ff934f;
+  margin: 50px;
+  height: 30vw;
+  width: 65vw;
+  border-radius: 20px;
 }
 
-#btnGmail {
-  margin: 8px;
+#btnGmail,
+.acessar,
+.btn {
+  margin: 10px;
   width: 63vw;
+  height: 5vw;
   cursor: pointer;
-}
-
-.form {
-  margin: 5px;
-  display: flex;
-}
-
-#email {
-  margin-top: 20px;
-}
-
-#btnLogin {
-  margin: 8px;
-  margin-left: 70px;
-  width: 30vw;
-  justify-content: center;
-  display: flex;
-  cursor: pointer;
+  border-radius: 10px;
 }
 
 #forgot {
@@ -104,14 +82,26 @@ li {
   margin: 5px;
   margin-top: 20px;
 }
+.bt {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
 
 #forgot:hover {
   cursor: pointer;
 }
 
 .mainFeed {
-  max-width: 900px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .newPost {
@@ -136,13 +126,18 @@ li {
   padding: 25px;
   margin: 0 110px;
 }
+.bt {
+  position: absolute;
+  top: 200px;
+  width: 150px;
+}
 
 .imgUser {
   display: flex;
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-image:url("./images/mulher-avatar.png");
+  background-image: url("./images/mulher-avatar.png");
   background-size: 80px;
   flex-direction: center;
 }
@@ -155,12 +150,14 @@ strong {
 }
 
 #textPost,
-#textPostUser  {
-  margin-top: 10px;
+#textPostUser {
+  /* margin-top: 40%; */
   width: 75vw;
   height: 17vh;
   border-radius: 5px;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .newPost #formPost {
   width: 100%;
@@ -194,14 +191,11 @@ strong {
 .btnLike {
   cursor: pointer;
 }
-/* .filePost {
-    
-} */
 
-.btnSubmitForm ,
-.deletePost { 
+
+.btnSubmitForm,
+.deletePost {
   margin-top: 5px;
-
 }
 
 .like {
@@ -221,14 +215,6 @@ strong {
   width: 100%;
 }
 
-@media screen and (min-width:550px) and (max-width: 1400px){
-  .newPost #formPost .iconsAndButton {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-
 .logo {
   width: 13vw;
   height: 15vh;
@@ -242,11 +228,40 @@ header {
   align-items: center;
   justify-content: center;
 }
+
+
+@media (min-width: 280px) and (max-width: 653px) {
+  .menu,
+  .logo .enter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    flex-direction: row;
+    height: auto;
+    margin-left: 8px;
+  }
+  footer {
+/*     justify-content:  */
+    justify-content: space-between;
+  }
+  .btn,
+  form,
+  #btnRegister {
+    justify-content: space-between;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    width: 20em;
+    text-align: center;
+  }
 }
 
-@media screen (max-width: 1750px) {
+@media (min-width: 768px) and (max-widht: 1024px) {
+  iframe {
+    width: 100px;
+    height: 75px;
+  }
+}
 
-  .newPost #formPost .iconsAndButton {
-    width: 58.5vw;
-  };
-};

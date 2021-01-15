@@ -5,6 +5,7 @@ export const Feed = () => {
   const feedPage = document.createElement('div');
   feedPage.innerHTML = `
       <div class="profile">
+      <button class="bt " id="btnLogout">Sair</button>
         <div class="imgUser">
         </div>
       </div>
@@ -25,8 +26,7 @@ export const Feed = () => {
         </main> 
         <ul id='posts'>
         </ul>      
-        
-    <button class="btn " id="btnLogout">Sair</button>
+    
   <footer>@Rede Social Eco Green - Alunas laboratoria
   </footer>
     
@@ -79,6 +79,7 @@ export const Feed = () => {
     });
   });
 
+
   const template = feedPage.querySelector('#posts');
 
   const btnLogout = feedPage.querySelector('#btnLogout');
@@ -97,8 +98,9 @@ export const Feed = () => {
       likesCount: 0,
       like: [],
       userUid: `${firebase.auth().currentUser.email}`,
-
       date: getDate(),
+
+
     };
     savingData(post);
     postsUl.prepend(createPostElement(post));
@@ -107,7 +109,8 @@ export const Feed = () => {
   const carregaPost = () => {
     getPosts(template);
   };
-  btnPost.addEventListener('click', carregaPost());
+    btnPost.addEventListener('click', carregaPost());
 
   return feedPage;
 };
+

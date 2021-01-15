@@ -51,6 +51,10 @@ export const authLogin = () => {
     });
 };
 
+
+// criando uma conta para novo usuário
+
+
 export const registerUser = () => {
   const email = document.getElementById('email');
   const senha = document.getElementById('senha');
