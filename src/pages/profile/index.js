@@ -1,7 +1,7 @@
-export const Profile = () => {
-  const profilePage = document.createElement('div');
-  profilePage.innerHTML = `
-  `;
-  return rootElement;
-};
+//export const Profile = () => {
+ // const profilePage = document.createElement('div');
+  //profilePage.innerHTML = `
+ // `;
+ // return rootElement;
+//};
   
