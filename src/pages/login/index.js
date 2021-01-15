@@ -42,10 +42,6 @@ export const Login = () => {
     authLogin();
   });
 
-  const btnRegister = rootElement.querySelector('#btnRegister');
-  btnRegister.addEventListener('click', (event) => {
-    event.preventDefault();
-    registerUser();
-  });
+  
   return rootElement;
 };

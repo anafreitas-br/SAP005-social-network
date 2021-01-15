@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 .menu {
   display: flex;
   flex-direction: row;
@@ -34,24 +33,9 @@ header {
   display: flex;
 }
 
-/* .two {
-} */
-
 li {
   list-style: none;
 }
-
-/* .one,
-.two,
-.three {
-  visibility: hidden;
-} */
-
-/*Aqui começa a primeira página do site*/
-
-/* #home {
-  text-decoration: none;
-} */
 
 .Initial {
   margin: 20px;
@@ -75,34 +59,19 @@ li {
   background-color: #ff934f;
   margin: 50px;
   height: 30vw;
+  width: 65vw;
   border-radius: 20px;
 }
 
-#btnGmail {
-  margin: 8px;
+#btnGmail,
+.acessar,
+.btn {
+  margin: 10px;
   width: 63vw;
+  height: 5vw;
   cursor: pointer;
-}
-
-/* .form {
-  margin: 5px;
-  display: flex;
-} */
-
-/* #email {
-  margin-top: 20px;
-} */
-
-/*#btnLogin {
-  /* margin: 8px;
-  margin-left: 70px;
-  width: 30vw;
-  justify-content: center;
-  display: flex; */
-/* cursor: pointer;
-  float: right;
   border-radius: 10px;
-} */
+}
 
 #forgot {
   margin: 5px;
@@ -113,19 +82,26 @@ li {
   margin: 5px;
   margin-top: 20px;
 }
+.bt {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
 
 #forgot:hover {
   cursor: pointer;
 }
 
 .mainFeed {
-  /* max-width: 100px;
-  margin: 0 auto; */
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* font-size: 25px;
-  text-indent: 2em; */
 }
 
 .newPost {
@@ -150,6 +126,11 @@ li {
   padding: 25px;
   margin: 0 110px;
 }
+.bt {
+  position: absolute;
+  top: 200px;
+  width: 150px;
+}
 
 .imgUser {
   display: flex;
@@ -171,14 +152,13 @@ strong {
 #textPost,
 #textPostUser {
   /* margin-top: 40%; */
-   width: 75vw;
+  width: 75vw;
   height: 17vh;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
-} 
+}
 .newPost #formPost {
   width: 100%;
   display: flex;
@@ -251,10 +231,45 @@ header {
   justify-content: center;
 }
 
-@media screen and (min-width: 550px) and (max-width: 1400px) {
+/* @media (min-width: 550px) and (max-width: 1400px) {
   .newPost #formPost .iconsAndButton {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+}  */
+
+@media (min-width: 280px) and (max-width: 653px) {
+  .menu,
+  .logo .enter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    flex-direction: row;
+    height: auto;
+    margin-left: 8px;
+  }
+  footer {
+    justify-content: height;
+    justify-content: space-between;
+  }
+  .btn,
+  form,
+  #btnRegister {
+    justify-content: space-between;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    width: 20em;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-widht: 1024px) {
+  iframe {
+    width: 100px;
+    height: 75px;
   }
 }

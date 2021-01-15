@@ -4,7 +4,7 @@ export const Feed = () => {
   const feedPage = document.createElement('div');
   feedPage.innerHTML = `
       <div class="profile">
-      <button class="btn " id="btnLogout">Sair</button>
+      <button class="bt " id="btnLogout">Sair</button>
         <div class="imgUser">
         </div>
       </div>
@@ -90,7 +90,7 @@ export const Feed = () => {
     const template = feedPage.querySelector('#posts');
     getPosts(template);
   };
-  btnPost.addEventListener('click', carregaPost());
+    btnPost.addEventListener('click', carregaPost());
 
   //  const deleteMsg = feedPage.querySelector('.deletePost');
   //  deleteMsg.addEventListener('click', (event) => {
@@ -98,5 +98,12 @@ export const Feed = () => {
   //    deleteNow();
   //  });
 
+  //     var deletePost= db.collection( 'posts' ). doc ( 'userPost ' );
+
+  //     // Remova o campo 'capital' do documento
+  //     var removePost = deletePost . update ({
+  //       userPost : firebase.firestore.FieldValue.deletar ()
+  //     });
   return feedPage;
 };
+

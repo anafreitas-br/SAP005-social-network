@@ -1,44 +1,10 @@
 const db = firebase.firestore();
-//db.settings({ timestampsInSnapshots: true });
-
-// //const renderPost = (doc) => {
-//   const li = document.createElement('li');
-//   const userPost = document.createElement('span');
-//  // const cross = document.createElement('div');
-
-//   li.setAttribute("data-id", doc.id);
-//   userPost.textContent = doc.data().userPost;
-//   //cross.textContent = 'x';
-
-//   li.appendChild(userPost);
-//   // li.appendChild(cross);
-//   posts.appendChild(li);
-// };
-
-// export const deleteNow = (e) => {
-//   const id = e.target.parentElement.getAttribute('data-id');
-//   db.collection('posts').doc(id).delete();
-//   deleteNow();
-// export const deleteNow = (userPost) => {
-//   const postsCollection = db.collection('posts');
-//   postsCollection.doc(userPost).get().then((doc) => 
-//   deleteNow(doc.id).remove()
-// };
 
 export const savingData = (post) => {
   db.collection('posts').add(post);
 };
 
 export const getPosts = () => db.collection('posts').get();
-
-//export const deleteNow = (id) => {
-  //const inputText = document.querySelector('#textPost');
-//  const confirmation = confirm("Tem certeza que deseja excluir esta publicação?");
-//  if (confirmation === true) {
-//    const id = e.target.parentElement.getAttribute('data-id');
-//    db.collection('posts').doc(id).get().delete();
-//  }
-//};
 
 export const loginGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -57,7 +23,6 @@ export const loginGoogle = () => {
       let credential = error.credential;
     });
 };
-
 
 export const authLogin = () => {
   let email = document.getElementById("email");
@@ -84,7 +49,7 @@ export const authLogin = () => {
     });
 };
 
-
+// criando uma conta para novo usuário
 export const registerUser = () => {
   let email = document.getElementById("email");
   let senha = document.getElementById("senha");
@@ -113,7 +78,6 @@ export const registerUser = () => {
       }
     });
 };
-
 
 export const outLogin = () => {
   firebase
