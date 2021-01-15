@@ -4,7 +4,7 @@ export const Feed = () => {
   const feedPage = document.createElement('div');
   feedPage.innerHTML = `
       <div class="profile">
-      <button class="btn " id="btnLogout">Sair</button>
+      <button class="bt " id="btnLogout">Sair</button>
         <div class="imgUser">
         </div>
       </div>
@@ -90,7 +90,8 @@ export const Feed = () => {
   const carregaPost = () => {
     getPosts(template);
   };
-  btnPost.addEventListener('click', carregaPost());
+    btnPost.addEventListener('click', carregaPost());
 
   return feedPage;
 };
+

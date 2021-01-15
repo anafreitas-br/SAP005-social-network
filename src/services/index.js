@@ -50,6 +50,10 @@ export const authLogin = () => {
     });
 };
 
+
+// criando uma conta para novo usuário
+
+
 export const registerUser = () => {
   let email = document.getElementById('email');
   let senha = document.getElementById('senha');
