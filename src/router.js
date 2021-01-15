@@ -10,7 +10,6 @@ const routeRender = () => {
     '/login': Login,
     '/feed': Feed,
   };
-
   rootDiv.innerHTML = '';
   rootDiv.appendChild(routes[window.location.pathname]());
 };

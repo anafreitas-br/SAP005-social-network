@@ -8,11 +8,12 @@ export const Home = () => {
       <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/dr5dueiANhI" 
       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
       gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
       </div>
       <footer>
       <p>© Rede Social Eco Green - Desenvolvido por <a href='https://github.com/anafreitas-br'>Ana Freitas</a>,<a href='https://github.com/edilenefern'>Edilene Fernandes</a> e <a href='https://github.com/Fernandapy'>Fernanda Lima</a> </p>
   </footer>
-</div>
+    </div>
   `;
   const enterSite = rootElement.querySelector('.enter');
   enterSite.addEventListener('click', (e) => {
