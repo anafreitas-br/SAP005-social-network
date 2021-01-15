@@ -73,7 +73,9 @@ Para o nossa rede social, seguimos o seguinte layout:
 
 ### 8 Desenvolvedoras
 <a href='https://github.com/anafreitas-br'>Ana Freitas</a>
+</br>
 <a href='https://github.com/edilenefern'>Edilene Fernandes</a> 
+</br>
 <a href='https://github.com/Fernandapy'>Fernanda Lima</a>
 
 
