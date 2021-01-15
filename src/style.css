@@ -191,9 +191,7 @@ strong {
 .btnLike {
   cursor: pointer;
 }
-/* .filePost {
-    
-} */
+
 
 .btnSubmitForm,
 .deletePost {
@@ -231,13 +229,6 @@ header {
   justify-content: center;
 }
 
-/* @media (min-width: 550px) and (max-width: 1400px) {
-  .newPost #formPost .iconsAndButton {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}  */
 
 @media (min-width: 280px) and (max-width: 653px) {
   .menu,
@@ -251,7 +242,7 @@ header {
     margin-left: 8px;
   }
   footer {
-    justify-content: height;
+/*     justify-content:  */
     justify-content: space-between;
   }
   .btn,
@@ -273,3 +264,4 @@ header {
     height: 75px;
   }
 }
+

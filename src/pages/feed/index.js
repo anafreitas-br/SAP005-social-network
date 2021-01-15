@@ -64,7 +64,8 @@ export const Feed = () => {
     });
   });
 
-  // const template = feedPage.querySelector('#posts');
+
+  const template = feedPage.querySelector('#posts');
 
   const btnLogout = feedPage.querySelector('#btnLogout');
   btnLogout.addEventListener('click', (event) => {
@@ -78,32 +79,19 @@ export const Feed = () => {
     event.preventDefault();
     const post = {
       userPost: submitData.value,
-      like: 0,
-      userUid: firebase.auth().currentUser.email,
-      // data: ,
+      like: [],
+      userUid: `${firebase.auth().currentUser.email}`,
+
     };
     savingData(post);
     postsUl.prepend(createPostElement(post));
   });
 
   const carregaPost = () => {
-    const template = feedPage.querySelector('#posts');
     getPosts(template);
   };
     btnPost.addEventListener('click', carregaPost());
 
-  //  const deleteMsg = feedPage.querySelector('.deletePost');
-  //  deleteMsg.addEventListener('click', (event) => {
-  //   event.preventDefault();
-  //    deleteNow();
-  //  });
-
-  //     var deletePost= db.collection( 'posts' ). doc ( 'userPost ' );
-
-  //     // Remova o campo 'capital' do documento
-  //     var removePost = deletePost . update ({
-  //       userPost : firebase.firestore.FieldValue.deletar ()
-  //     });
   return feedPage;
 };
 

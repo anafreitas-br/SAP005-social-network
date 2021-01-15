@@ -3,47 +3,40 @@
 ## Eco Green
 
 - [1. Produto](#1-produto)
-- [2. Histórias de usuários](#histórias-de-usuários)
-- [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-- [4. Considerações gerais](#4-considerações-gerais)
-- [5. Critérios de aceitação mínimos do
-  projeto](#5-critérios-de-aceitação-mínimos-do-projeto)
-- [6. Hacker edition](#6-hacker-edition)
-- [7. Entrega](#7-entrega)
-- [8. Guias, dicas e leituras
-  complementares](#8-guias-dicas-e-leituras-complementares)
+- [2. Personas](#2-personas)
+- [3. Histórias de usuários](#3-histórias-de-usuários)
+- [4. Interface](#4-Interface)
+- [5. Desenho da Interface de Usuário (protótipo de baixa fidelidade) e fluxograma](#5-desenho-da-interface-de-Usuário-protótipo-de-baixa-fidelidade-e-fluxograma))
 
 ---
 
 ## 1. Produto
 
-<img src="./src/images/imagelogo.jpg" justify-content="center"/> 
+<img src="./src/images/imagelogo.jpg"/> 
 
-Seguindo as orientações de Desenvolvemos uma página direcionada a jogadores iniciantes de Pokémon Go. Nela os usuários podem encontrar informações essenciais e de forma clara sobre pokémons encontrados no jogo.
+ Considerando o assunto que sempre estará em pauta, meio Ambiente, natureza, sociedade, efeitos do ser humano na natureza. Pensamos na necessidade de nossos usuários de trocar informações, apoiar projetos, se engajar mais na questões ambientais e sociais e desenvolvemos uma Rede Social, que possibilita que pessoas de todas as partes do mundo possam fazer essas trocas entre si. A Eco Green é uma rede social voltada exclusivamente para as temáticas socioambientais, seus usuários podem ser tanto pessoas físicas, quanto empresas, que estão engajados nas questão ambientais, ou que gostariam de se envolver e conhecer um pouco mais desse Universo. 
 
-## 2. Histórias de usuários
+## 2. Personas
 
 <img src="./src/images/Joao-Silva.png"/>
 <img src="./src/images/Maria.png"/>
 
+## 2. Histórias de usuários
 
-Neste projeto você construirá uma Rede Social sobre o que você e sua equipe
-decidirem. Pode ser, por exemplo, sobre alimentação saudável, feminismo,
-educação, saúde, energias renováveis, amantes das
-[Empanadas](https://pt.wikipedia.org/wiki/Empanada), de
-[Tacos](<https://pt.wikipedia.org/wiki/Taco_(culin%C3%A1ria)>), de
-[Feijoada](https://pt.wikipedia.org/wiki/Feijoada), ou do que seja.
+  Necessidades atendidas
 
-Sua Rede Social terá que permitir à qualquer usuário criar uma conta de acesso,
-logar-se com ela, criar, editar, deletar e dar _likes_ em publicações.
+Tendo como referência as necessidades das personas "João" e "Maria" elaboramos as seguintes funcionalidades para nossas 4 sprints de desenvolvimento:
 
-## 3. Objetivos de aprendizagem
+   Os usuários devem interagir entre si por meio de postagens, curtindo as postagens uns dos outros. Pessoas físicas e também empresas podem participar contanto que respeitem o tema da rede. Ter uma aba dentro do site contendo as principais e mais atuais informações sobre a temática. Os usuários devem poder criar, editar e deletar suas postagens. O usuário possa criar um novo cadastro ou se logar por meio de uma conta google. 
 
-O objetivo principal de aprendizagem deste projeto é construir uma [Single-page
-Application
-(SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)
-[_responsiva_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
-(com mais de uma tela/ página) na qual seja possível **ler e escrever dados.**
+## 4. Interface
+
+Atende a diferentes formatos de dispositivos e se trata de uma SPA (Single Page Application), para melhor experiência do usuário e menor tempo de espera para carregamento do conteúdo da página. É possível **ler, escrever, editar e excluir dados.**
+
+### 5.4 Desenho da Interface de Usuário (protótipo de baixa fidelidade)
+
+<img src="">
+
 
 ### HTML e CSS
 
@@ -95,94 +88,11 @@ Application
 
 ---
 
-## 4. Considerações gerais
 
-- Este projeto deve ser desenvolvido em trios.
-
-- A lógica do projeto deve estar implementada completamente em JavaScript
-  (ES6+), HTML e CSS :smiley:. Para este projeto **não está permitido** o uso de
-  _frameworks_ ou bibliotecas de CSS e JS.
-
-- A divisão e organização do trabalho deve permitir, sem exceção, que **cada
-  integrante** da equipe pratique a aprendizagem de tudo que está envolvido em
-  **cada história**. _Não dividam o trabalho como em uma fábrica._
-
-- Está avançando em seus projetos com alguma fluidez e sem grandes problemas?
-  Seja generosa com suas parceiras, deixe-as aprender e praticar sem restrições,
-  mesmo que demore um pouco mais. Aproveite para _mentorá-las_, para fazer _pair
-  programming_. Uma das melhores formas de aprender é explicar verbalmente.
-
-- Está sentindo dificuldade e para você é mais difícil de avançar? Não fique com
-  as partes "fáceis" do projeto. Converse, negocie, busque sua oportunidade de
-  praticar e aprender o que é mais difícil para você.
-
-- Vocês apenas poderão trabalhar em uma história por vez. Não avancem para a
-  próxima sem completar a anterior. As histórias apenas são concluídas quando se
-  completam **todos** os critérios de aceitação + **toda** sua definição de
-  pronto.
 
 ## 5. Critérios de aceitação mínimos do projeto
 
-### 5.1 Boilerplate
-
-O _boilerplate_ contém uma estrutura de arquivos como ponto de partida, assim
-como toda a configuração de dependências:
-
-```text
-.
-├── src
-|  ├── pages (páginas)
-|  |  └── home
-|  |  |  ├── index.js
-|  |  |  └── index.spec.js
-|  |  └── login
-|  |     ├── index.js
-|  |     └── index.spec.js
-|  ├── services (serviços externos)
-|  |  ├── index.js
-|  |  └── index.spec.js
-|  ├── utils
-|  |  └── history.js
-|  ├── index.html
-|  ├── router.js
-|  └── style.css
-├── README.md
-└── package.json
-
-```
-
-### 5.2 Definição do produto
-
-No `README.md`, conte-nos brevemente como você mapeou as necessidades dos seus
-usuários e como você chegou à definição final do seu produto. É importante que
-detalhe:
-
-- Quem são os principais usuários do produto.
-- Qual problema o produto resolve/para que ele serve para esses usuários.
-
-### 5.3 Histórias de usuário
-
-Depois de entender as necessidades de seus usuários, escreva as Histórias de
-Usuário. Elas representam tudo o que ele precisa fazer/ver na Rede Social. Cada
-uma de suas histórias de usuário deve possuir:
-
-- **Critérios de aceitação:** tudo o que deve acontecer para satisfazer as
-  necessidades do usuário.
-
-- **Definição de pronto:** todos os aspectos técnicos que devem ser atendidos
-  para que, como equipe, saibam que essa história está finalizada e pronta para
-  ser publicada. **Todas** suas histórias de usuário (com exceções), devem
-  incluir esses aspectos em sua definição de pronto (além de tudo o que precisa
-  adicionar):
-
-  - Ser uma SPA.
-  - Ser _responsivo_.
-  - Receber _code review_ de pelo menos uma parceira de sua equipe.
-  - Fazer _tests_ unitários.
-  - Fazer testes manuais buscando erros e imperfeições simples.
-  - Fazer testes de usabilidade e incorporar o _feedback_ dos usuários como
-    melhorias.
-
+### 
 ### 5.4 Desenho da Interface de Usuário (protótipo de baixa fidelidade)
 
 Você deve definir qual será o fluxo que o usuário seguirá dentro do seu
@@ -358,16 +268,3 @@ Nos projetos anteriores, consumimos dados, mas ainda não tínhamos escrito dado
 criar (salvar) novos dados, além de ler, atualizar e modificar os dados
 existentes. Esses dados podem ser salvos remotamente usando o
 [Firebase](https://firebase.google.com/).
-
-Outras:
-
-- [Mobile
-  First](https://tableless.com.br/mobile-first-a-arte-de-pensar-com-foco/)
-- [Mobile First Is NOT Mobile Only - Nielsen Norman
-  Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
-- [Flexbox - CSS
-  Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [Módulos:
-  Export](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-- [Módulos:
-  Import](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
