@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable quotes */
 /* eslint-disable no-alert */
 const db = firebase.firestore();
 
@@ -12,17 +14,9 @@ export const loginGoogle = () => {
   firebase
     .auth()
     .signInWithPopup(provider)
-    .then((result) => {
-      const token = result.credential.accessToken;
-      const user = result.user;
+    .then(() => {
       alert("login feito com sucesso");
       window.location.replace('/feed');
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      const email = error.email;
-      const credential = error.credential;
     });
 };
 
@@ -50,10 +44,6 @@ export const authLogin = () => {
       }
     });
 };
-
-
-// criando uma conta para novo usuário
-
 
 export const registerUser = () => {
   const email = document.getElementById('email');
@@ -100,7 +90,7 @@ export const outLogin = () => {
 export const deletePost = (id) => {
   db.collection('posts').doc(id).delete()
     .then(() => {
-      console.log('Apagou!');
+      console.log('Publicação deletada!');
     })
     .catch((error) => {
       console.error('Erro ao excluir o post: ', error);

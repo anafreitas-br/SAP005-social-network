@@ -1,4 +1,4 @@
-import { loginGoogle, authLogin, registerUser } from "../../services/index.js";
+import { loginGoogle, authLogin, registerUser } from '../../services/index.js';
 
 export const Login = () => {
   const rootElement = document.createElement('div');
@@ -27,7 +27,9 @@ export const Login = () => {
         </li>
       </ul> 
   </div>
-  <footer>@Rede Social Eco Green - Alunas laboratoria</footer>
+<footer> 
+<p>© Rede Social Eco Green - Desenvolvido por <a href='https://github.com/anafreitas-br'>Ana Freitas</a>,<a href='https://github.com/edilenefern'>Edilene Fernandes</a> e <a href='https://github.com/Fernandapy'>Fernanda Lima</a> </p>
+</footer>
   `;
 
   const btnGmail = rootElement.querySelector('#btnGmail');
@@ -42,6 +44,11 @@ export const Login = () => {
     authLogin();
   });
 
-  
+  const btnRegister = rootElement.querySelector('#btnRegister');
+  btnRegister.addEventListener('click', (event) => {
+    event.preventDefault();
+    registerUser();
+  });
+
   return rootElement;
 };

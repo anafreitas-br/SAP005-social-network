@@ -51,8 +51,6 @@ li {
   height: 30vw;
 }
 
-/*Aqui começa a segunda página do site*/
-
 .container {
   justify-content: center;
   align-items: center;
@@ -215,6 +213,13 @@ strong {
   width: 100%;
 }
 
+@media screen and (min-width:550px) and (max-width: 1400px){
+  .newPost #formPost .iconsAndButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
 .logo {
   width: 13vw;
   height: 15vh;
@@ -229,10 +234,14 @@ header {
   justify-content: center;
 }
 
+}
+
+
 
 @media (min-width: 280px) and (max-width: 653px) {
   .menu,
-  .logo .enter {
+  .logo, 
+  .enter {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -242,26 +251,20 @@ header {
     margin-left: 8px;
   }
   footer {
-/*     justify-content:  */
     justify-content: space-between;
   }
+
   .btn,
   form,
   #btnRegister {
     justify-content: space-between;
   }
+
   .container {
     display: flex;
     align-items: center;
     width: 20em;
     text-align: center;
   }
-}
 
-@media (min-width: 768px) and (max-widht: 1024px) {
-  iframe {
-    width: 100px;
-    height: 75px;
-  }
 }
-
