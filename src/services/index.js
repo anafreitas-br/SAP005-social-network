@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 const db = firebase.firestore();
 
 export const savingData = (post) => {
@@ -11,27 +12,27 @@ export const loginGoogle = () => {
   firebase
     .auth()
     .signInWithPopup(provider)
-    .then(function (result) {
+    .then((result) => {
       const token = result.credential.accessToken;
       const user = result.user;
-      alert('login feito com sucesso');
+      alert("login feito com sucesso");
       window.location.replace('/feed');
     })
-    .catch(function (error) {
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      let email = error.email;
-      let credential = error.credential;
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const email = error.email;
+      const credential = error.credential;
     });
 };
 
 export const authLogin = () => {
-  let email = document.getElementById('email');
-  let senha = document.getElementById('senha');
+  const email = document.getElementById('email');
+  const senha = document.getElementById('senha');
   firebase
     .auth()
     .signInWithEmailAndPassword(email.value, senha.value)
-    .then(function (_result) {
+    .then(() => {
       alert('Usuário Logado Com Sucesso!');
       window.location.replace('/feed');
     })
@@ -55,17 +56,17 @@ export const authLogin = () => {
 
 
 export const registerUser = () => {
-  let email = document.getElementById('email');
-  let senha = document.getElementById('senha');
+  const email = document.getElementById('email');
+  const senha = document.getElementById('senha');
   firebase
     .auth()
     .createUserWithEmailAndPassword(email.value, senha.value)
-    .then(function (_result) {
+    .then(() => {
       alert('Usuário Cadastrado Com Sucesso!');
 
       window.location.replace('/feed');
     })
-    .catch(function (error) {
+    .catch((error) => {
       switch (error.code) {
         case 'auth/email-already-in-use':
           alert('O endereço de email já está cadastrado.');
@@ -87,11 +88,21 @@ export const outLogin = () => {
   firebase
     .auth()
     .signOut()
-    .then((_error) => {
+    .then(() => {
       alert('Volte logo!');
       window.location.replace('/');
     })
-    .catch(function (error) {
+    .catch((error) => {
       alert(`Erro desconhecido: ${error.code}: ${error.message}`);
+    });
+};
+
+export const deletePost = (id) => {
+  db.collection('posts').doc(id).delete()
+    .then(() => {
+      console.log('Apagou!');
+    })
+    .catch((error) => {
+      console.error('Erro ao excluir o post: ', error);
     });
 };

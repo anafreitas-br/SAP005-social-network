@@ -9,7 +9,8 @@ export const Home = () => {
       gyroscope; picture-in-picture" allowfullscreen></iframe>
       
       </div>
-      <footer>@Rede Social Eco Green - Alunas laboratoria
+      <footer>
+    <p>© Rede Social Eco Green - Desenvolvido por <a href='https://github.com/edilenefern'>Edilene Fernandes</a>, <a href='https://github.com/Fernandapy'>Fernanda Lima</a> e <a href='https://github.com/anafreitas-br'>Ana Freitas</a></p>
   </footer>
     </div>
   `;
