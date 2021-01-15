@@ -9,7 +9,8 @@ export const Home = () => {
       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
       gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <footer>@Rede Social Eco Green - Alunas laboratoria
+      <footer>
+    <p>© Rede Social Eco Green - Desenvolvido por <a href='https://github.com/larissamiyaji'>Larissa</a>, <a href='https://github.com/kellyalves87'>Kelly</a> e <a href='https://github.com/mirescordeiro'>Tamires</a></p>
   </footer>
 </div>
   `;
