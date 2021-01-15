@@ -1,7 +1,7 @@
-import { loginGoogle, authLogin, registerUser } from "../../services/index.js";
+import { loginGoogle, authLogin, registerUser } from '../../services/index.js';
 
 export const Login = () => {
-  const rootElement = document.createElement("div");
+  const rootElement = document.createElement('div');
   rootElement.innerHTML = `
   <div class="loginInit">
   <button class="btn " id="btnGmail">
@@ -25,29 +25,28 @@ export const Login = () => {
     </li>
     </ul> 
   </div>
-<footer>@Rede Social Eco Green - Alunas laboratoria
- </footer>
+<footer> 
+<p>© Rede Social Eco Green - Desenvolvido por <a href='https://github.com/anafreitas-br'>Ana Freitas</a>,<a href='https://github.com/edilenefern'>Edilene Fernandes</a> e <a href='https://github.com/Fernandapy'>Fernanda Lima</a> </p>
+</footer>
   `;
 
-  const btnGmail = rootElement.querySelector("#btnGmail");
-  btnGmail.addEventListener("click", (event) => {
+  const btnGmail = rootElement.querySelector('#btnGmail');
+  btnGmail.addEventListener('click', (event) => {
     event.preventDefault();
     loginGoogle();
   });
 
-  const btnLogin = rootElement.querySelector("#btnLogin");
-  btnLogin.addEventListener("click", (event) => {
+  const btnLogin = rootElement.querySelector('#btnLogin');
+  btnLogin.addEventListener('click', (event) => {
     event.preventDefault();
     authLogin();
-    
   });
 
-  const btnRegister = rootElement.querySelector("#btnRegister");
-  btnRegister.addEventListener("click", (event) => {
+  const btnRegister = rootElement.querySelector('#btnRegister');
+  btnRegister.addEventListener('click', (event) => {
     event.preventDefault();
     registerUser();
   });
-
 
   return rootElement;
 };

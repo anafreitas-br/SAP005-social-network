@@ -27,9 +27,6 @@ header {
   display: flex;
 }
 
-.two {
-  
-}
 
 
 li {
@@ -229,6 +226,9 @@ strong {
   }
 
 
+
+
+
 .logo {
   width: 13vw;
   height: 15vh;
@@ -244,9 +244,3 @@ header {
 }
 }
 
-@media screen (max-width: 1750px) {
-
-  .newPost #formPost .iconsAndButton {
-    width: 58.5vw;
-  };
-};

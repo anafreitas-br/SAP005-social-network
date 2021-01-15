@@ -1,7 +1,7 @@
 export const Home = () => {
   const rootElement = document.createElement('div');
   rootElement.innerHTML = `
-     <div class="Initial">
+    <div class="Initial">
       <p> A sua rede SocioAmbiental, criada para conectar idéias que transformam o planeta! </p>
       <button class="enter"><strong> Fazer Login </strong></button>
       </br>
@@ -10,7 +10,7 @@ export const Home = () => {
       gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <footer>
-    <p>© Rede Social Eco Green - Desenvolvido por <a href='https://github.com/edilenefern'>Edilene Fernandes</a>, <a href='https://github.com/Fernandapy'>Fernanda Lima</a> e <a href='https://github.com/anafreitas-br'>Ana Freitas</a></p>
+      <p>© Rede Social Eco Green - Desenvolvido por <a href='https://github.com/anafreitas-br'>Ana Freitas</a>,<a href='https://github.com/edilenefern'>Edilene Fernandes</a> e <a href='https://github.com/Fernandapy'>Fernanda Lima</a> </p>
   </footer>
 </div>
   `;
