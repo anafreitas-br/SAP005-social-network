@@ -21,5 +21,3 @@ export const Home = () => {
   });
   return rootElement;
 };
-
-//
